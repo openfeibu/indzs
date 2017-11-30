@@ -725,9 +725,9 @@ class Member extends Base
 			$data[$k]['member_list_username'] = $value['member_list_username']."\t";
             $data[$k]['ZexamineeNumber'] = $value['ZexamineeNumber']."\t";
 		}
-		$field_titles = ['中职考生号','高考考生号','姓名','身份证号码','中职所在专业','中职学校','对口高职专业','户口所在地','生源地','考生联系人','联系电话','联系地址','邮编'];
+		$field_titles = ['中职考生号','考生号','姓名','身份证号码','中职所在专业','中职学校','对口高职专业','户口所在地','生源地','考生联系人','联系电话','联系地址','邮编'];
         $fields = ['ZexamineeNumber','GexamineeNumber','member_list_nickname','member_list_username','major_name','school_name','recruit_major_name','domicile','documentType','addressee','tell','address','zipCode'];
-        $table = '中职学生'.date('YmdHis');
+        $table = '报考学生'.date('YmdHis');
         error_reporting(E_ALL);
         date_default_timezone_set('Asia/chongqing');
         $objPHPExcel = new \PHPExcel();
@@ -795,9 +795,9 @@ class Member extends Base
 			$data[$k]['member_list_username'] = $value['member_list_username']."\t";
             $data[$k]['ZexamineeNumber'] = $value['ZexamineeNumber']."\t";
 		}
-		$field_titles = ['中职考生号','高考考生号','姓名','身份证号码','中职所在专业','中职学校','对口高职专业','理论成绩','技能成绩','总分','户口所在地','生源地','考生联系人','联系电话','联系地址','邮编'];
+		$field_titles = ['中职考生号','考生号','姓名','身份证号码','中职所在专业','中职学校','对口高职专业','理论成绩','技能成绩','总分','户口所在地','生源地','考生联系人','联系电话','联系地址','邮编'];
         $fields = ['ZexamineeNumber','GexamineeNumber','member_list_nickname','member_list_username','major_name','school_name','recruit_major_name','major_score_total','recruit_score','total_score','domicile','documentType','addressee','tell','address','zipCode'];
-        $table = '中职学生'.date('YmdHis');
+        $table = '报考学生'.date('YmdHis');
         error_reporting(E_ALL);
         date_default_timezone_set('Asia/chongqing');
         $objPHPExcel = new \PHPExcel();
