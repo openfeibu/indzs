@@ -1,0 +1,2494 @@
+[ 2017-11-27T10:56:49+08:00 ] 192.168.10.10 192.168.10.1 GET /
+[ log ] indzs.com/ [运行时间：0.163170s][吞吐率：6.13req/s] [内存消耗：668.23kb] [文件加载：81]
+[ log ] Cron:clearlog Runat 2017-11-27 10:56:49 Use 0.000934 s
+
+
+[ 2017-11-27T10:56:49+08:00 ] 192.168.10.10 192.168.10.1 GET /
+[ log ] indzs.com/ [运行时间：0.168703s][吞吐率：5.93req/s] [内存消耗：624.27kb] [文件加载：81]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001728s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009025s ]
+[ info ] [ RUN ] app\home\controller\Index->index[ /home/vagrant/Code/independent/app/home/controller/Index.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/index.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.011973s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000395s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_news` [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid`,`news_time` FROM `zs_news` `a` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (17) ORDER BY news_time desc LIMIT 7 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid`,`news_time` FROM `zs_news` `a` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (18) ORDER BY news_time desc LIMIT 7 [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid`,`news_time` FROM `zs_news` `a` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (16) ORDER BY news_time desc LIMIT 7 [ RunTime:0.000361s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T10:56:49+08:00 ] 192.168.10.10 192.168.10.1 GET /home/login/verify.html
+[ log ] indzs.com/home/login/verify.html [运行时间：0.194314s][吞吐率：5.15req/s] [内存消耗：373.98kb] [文件加载：72]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003296s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009744s ]
+[ info ] [ RUN ] app\home\controller\Login->verify[ /home/vagrant/Code/independent/app/home/controller/Login.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007205s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T10:57:04+08:00 ] 192.168.10.10 192.168.10.1 POST /home/login/runlogin.html
+[ log ] indzs.com/home/login/runlogin.html [运行时间：0.143551s][吞吐率：6.97req/s] [内存消耗：3,160.74kb] [文件加载：95]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'login',
+    2 => 'runlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://indzs.com',
+  'accept' => '*/*',
+  'content-length' => '74',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+)
+[ info ] [ PARAM ] array (
+  'member_list_username' => '440204199905313917',
+  'member_list_pwd' => '313917',
+  'verify' => '7yzx',
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.060344s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.006249s ]
+[ info ] [ RUN ] app\home\controller\Login->runlogin[ /home/vagrant/Code/independent/app/home/controller/Login.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004610s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000331s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_web_log` [ RunTime:0.000606s ]
+[ sql ] [ SQL ] INSERT INTO `zs_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (0 , '192.168.10.1' , '局域网 局域网  ' , 'Mac' , 'Chrome(62.0.3202.94)' , '/home/login/runlogin.html' , 'home' , 'Login' , 'runlogin' , 'Ajax' , 's:12:\"保密数据\";' , 1511751424) [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_username` = '440204199905313917' LIMIT 1 [ RunTime:0.000511s ]
+[ sql ] [ SQL ] UPDATE `zs_member_list`  SET `last_login_time`=1511751424,`last_login_ip`='192.168.10.1'  WHERE  `member_list_id` = 742 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000207s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T10:57:04+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.157088s][吞吐率：6.37req/s] [内存消耗：682.45kb] [文件加载：84]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001530s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008192s ]
+[ info ] [ RUN ] app\home\controller\Center->index[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/user/center.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'num',
+  23 => 'major',
+  24 => 'school',
+  25 => 'recruit_major',
+  26 => 'member_list_id',
+  27 => 'member_list_username',
+  28 => 'member_list_pwd',
+  29 => 'member_list_salt',
+  30 => 'member_list_groupid',
+  31 => 'member_list_nickname',
+  32 => 'member_list_province',
+  33 => 'member_list_city',
+  34 => 'member_list_town',
+  35 => 'member_list_sex',
+  36 => 'member_list_headpic',
+  37 => 'member_list_tel',
+  38 => 'member_list_email',
+  39 => 'member_list_open',
+  40 => 'member_list_addtime',
+  41 => 'member_list_from',
+  42 => 'user_url',
+  43 => 'birthday',
+  44 => 'signature',
+  45 => 'last_login_ip',
+  46 => 'last_login_time',
+  47 => 'user_activation_key',
+  48 => 'user_status',
+  49 => 'score',
+  50 => 'coin',
+  51 => 'school_id',
+  52 => 'major_id',
+  53 => 'major_score',
+  54 => 'recruit_score',
+  55 => 'address',
+  56 => 'info',
+  57 => 'date',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004527s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000365s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` `m` INNER JOIN `zs_member_info` `mi` ON `m`.`member_list_id`=`mi`.`member_list_id` WHERE  `m`.`member_list_id` = 742 LIMIT 1 [ RunTime:0.001556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_major` [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_major` WHERE  `major_id` = 14 LIMIT 1 [ RunTime:0.000232s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_school` [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_school` WHERE  `school_id` = 18 LIMIT 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_recruit_major` [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_recruit_major` `rm` INNER JOIN `zs_enrollment` `e` ON `e`.`recruit_major_id`=`rm`.`recruit_major_id` WHERE  `e`.`major_ids` LIKE '%,14,%'  AND `e`.`school_id` = 18 LIMIT 1 [ RunTime:0.000314s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T10:57:04+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.097014s][吞吐率：10.31req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T10:57:06+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.143521s][吞吐率：6.97req/s] [内存消耗：602.91kb] [文件加载：81]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001747s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008558s ]
+[ info ] [ RUN ] app\home\controller\Center->index[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/user/center.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'num',
+  23 => 'major',
+  24 => 'school',
+  25 => 'recruit_major',
+  26 => 'member_list_id',
+  27 => 'member_list_username',
+  28 => 'member_list_pwd',
+  29 => 'member_list_salt',
+  30 => 'member_list_groupid',
+  31 => 'member_list_nickname',
+  32 => 'member_list_province',
+  33 => 'member_list_city',
+  34 => 'member_list_town',
+  35 => 'member_list_sex',
+  36 => 'member_list_headpic',
+  37 => 'member_list_tel',
+  38 => 'member_list_email',
+  39 => 'member_list_open',
+  40 => 'member_list_addtime',
+  41 => 'member_list_from',
+  42 => 'user_url',
+  43 => 'birthday',
+  44 => 'signature',
+  45 => 'last_login_ip',
+  46 => 'last_login_time',
+  47 => 'user_activation_key',
+  48 => 'user_status',
+  49 => 'score',
+  50 => 'coin',
+  51 => 'school_id',
+  52 => 'major_id',
+  53 => 'major_score',
+  54 => 'recruit_score',
+  55 => 'address',
+  56 => 'info',
+  57 => 'date',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.003723s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000423s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000395s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` `m` INNER JOIN `zs_member_info` `mi` ON `m`.`member_list_id`=`mi`.`member_list_id` WHERE  `m`.`member_list_id` = 742 LIMIT 1 [ RunTime:0.001711s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_major` [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_major` WHERE  `major_id` = 14 LIMIT 1 [ RunTime:0.000308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_school` [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_school` WHERE  `school_id` = 18 LIMIT 1 [ RunTime:0.000301s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_recruit_major` [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_recruit_major` `rm` INNER JOIN `zs_enrollment` `e` ON `e`.`recruit_major_id`=`rm`.`recruit_major_id` WHERE  `e`.`major_ids` LIKE '%,14,%'  AND `e`.`school_id` = 18 LIMIT 1 [ RunTime:0.000362s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T10:57:06+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.136791s][吞吐率：7.31req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T11:02:15+08:00 ] 192.168.10.10 192.168.10.1 POST /home/center/update_info.html
+[ log ] indzs.com/home/center/update_info.html [运行时间：0.193872s][吞吐率：5.16req/s] [内存消耗：3,123.95kb] [文件加载：91]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'update_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://indzs.com',
+  'accept' => '*/*',
+  'content-length' => '20',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'wish',
+  'value' => 'asdf',
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.068218s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008010s ]
+[ info ] [ RUN ] app\home\controller\Center->update_info[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.003995s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000392s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_web_log` [ RunTime:0.000519s ]
+[ sql ] [ SQL ] INSERT INTO `zs_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (742 , '192.168.10.1' , '局域网 局域网  ' , 'Mac' , 'Chrome(62.0.3202.94)' , '/home/center/update_info.html' , 'home' , 'Center' , 'update_info' , 'Ajax' , 'a:2:{s:4:\"name\";s:4:\"wish\";s:5:\"value\";s:4:\"asdf\";}' , 1511751735) [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.001029s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_info` [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_info` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.002089s ]
+[ sql ] [ SQL ] UPDATE `zs_member_info`  SET `wish`='asdf'  WHERE  `member_list_id` = 742 [ RunTime:0.005598s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T11:02:45+08:00 ] 192.168.10.10 192.168.10.1 POST /home/center/update_info.html
+[ log ] indzs.com/home/center/update_info.html [运行时间：0.206210s][吞吐率：4.85req/s] [内存消耗：3,123.95kb] [文件加载：91]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'update_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://indzs.com',
+  'accept' => '*/*',
+  'content-length' => '20',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'wish',
+  'value' => 'asdf',
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.078677s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.014004s ]
+[ info ] [ RUN ] app\home\controller\Center->update_info[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004422s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000376s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_web_log` [ RunTime:0.000564s ]
+[ sql ] [ SQL ] INSERT INTO `zs_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (742 , '192.168.10.1' , '局域网 局域网  ' , 'Mac' , 'Chrome(62.0.3202.94)' , '/home/center/update_info.html' , 'home' , 'Center' , 'update_info' , 'Ajax' , 'a:2:{s:4:\"name\";s:4:\"wish\";s:5:\"value\";s:4:\"asdf\";}' , 1511751765) [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.001103s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_info` [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_info` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.001747s ]
+[ sql ] [ SQL ] UPDATE `zs_member_info`  SET `wish`='asdf'  WHERE  `member_list_id` = 742 [ RunTime:0.005475s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T11:02:58+08:00 ] 192.168.10.10 192.168.10.1 POST /home/center/update_info.html
+[ log ] indzs.com/home/center/update_info.html [运行时间：0.205074s][吞吐率：4.88req/s] [内存消耗：3,124.18kb] [文件加载：91]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'update_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://indzs.com',
+  'accept' => '*/*',
+  'content-length' => '29',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'skillCertificate',
+  'value' => 'f',
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.073773s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.006815s ]
+[ info ] [ RUN ] app\home\controller\Center->update_info[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007496s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000375s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_web_log` [ RunTime:0.001156s ]
+[ sql ] [ SQL ] INSERT INTO `zs_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (742 , '192.168.10.1' , '局域网 局域网  ' , 'Mac' , 'Chrome(62.0.3202.94)' , '/home/center/update_info.html' , 'home' , 'Center' , 'update_info' , 'Ajax' , 'a:2:{s:4:\"name\";s:16:\"skillCertificate\";s:5:\"value\";s:1:\"f\";}' , 1511751778) [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_info` [ RunTime:0.001166s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_info` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.002020s ]
+[ sql ] [ SQL ] UPDATE `zs_member_info`  SET `skillCertificate`='f'  WHERE  `member_list_id` = 742 [ RunTime:0.006430s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T11:03:39+08:00 ] 192.168.10.10 192.168.10.1 POST /home/center/update_info.html
+[ log ] indzs.com/home/center/update_info.html [运行时间：0.188986s][吞吐率：5.29req/s] [内存消耗：3,124.18kb] [文件加载：91]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'update_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://indzs.com',
+  'accept' => '*/*',
+  'content-length' => '29',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'skillCertificate',
+  'value' => 'f',
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.062074s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.006901s ]
+[ info ] [ RUN ] app\home\controller\Center->update_info[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004181s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000761s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_web_log` [ RunTime:0.000701s ]
+[ sql ] [ SQL ] INSERT INTO `zs_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (742 , '192.168.10.1' , '局域网 局域网  ' , 'Mac' , 'Chrome(62.0.3202.94)' , '/home/center/update_info.html' , 'home' , 'Center' , 'update_info' , 'Ajax' , 'a:2:{s:4:\"name\";s:16:\"skillCertificate\";s:5:\"value\";s:1:\"f\";}' , 1511751819) [ RunTime:0.000440s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000721s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000324s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000269s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_info` [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_info` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.001984s ]
+[ sql ] [ SQL ] UPDATE `zs_member_info`  SET `skillCertificate`='f'  WHERE  `member_list_id` = 742 [ RunTime:0.005097s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T11:03:53+08:00 ] 192.168.10.10 192.168.10.1 POST /home/center/update_info.html
+[ log ] indzs.com/home/center/update_info.html [运行时间：0.186208s][吞吐率：5.37req/s] [内存消耗：3,124.18kb] [文件加载：91]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'update_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://indzs.com',
+  'accept' => '*/*',
+  'content-length' => '29',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'skillCertificate',
+  'value' => 'f',
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.070965s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.011042s ]
+[ info ] [ RUN ] app\home\controller\Center->update_info[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005769s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000355s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_web_log` [ RunTime:0.000515s ]
+[ sql ] [ SQL ] INSERT INTO `zs_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (742 , '192.168.10.1' , '局域网 局域网  ' , 'Mac' , 'Chrome(62.0.3202.94)' , '/home/center/update_info.html' , 'home' , 'Center' , 'update_info' , 'Ajax' , 'a:2:{s:4:\"name\";s:16:\"skillCertificate\";s:5:\"value\";s:1:\"f\";}' , 1511751833) [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000650s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000601s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_info` [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_info` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.001498s ]
+[ sql ] [ SQL ] UPDATE `zs_member_info`  SET `skillCertificate`='f'  WHERE  `member_list_id` = 742 [ RunTime:0.004819s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T11:27:09+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.106956s][吞吐率：9.35req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T12:20:27+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.106538s][吞吐率：9.39req/s] [内存消耗：372.22kb] [文件加载：69]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001537s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/vagrant/Code/independent/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'code',
+  23 => 'msg',
+  24 => 'data',
+  25 => 'url',
+  26 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.003738s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T12:20:29+08:00 ] 192.168.10.10 192.168.10.1 GET /
+[ log ] indzs.com/ [运行时间：0.200227s][吞吐率：4.99req/s] [内存消耗：622.80kb] [文件加载：80]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001781s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.011151s ]
+[ info ] [ RUN ] app\home\controller\Index->index[ /home/vagrant/Code/independent/app/home/controller/Index.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/index.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007903s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000467s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_news` [ RunTime:0.000861s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid`,`news_time` FROM `zs_news` `a` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (17) ORDER BY news_time desc LIMIT 7 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid`,`news_time` FROM `zs_news` `a` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (18) ORDER BY news_time desc LIMIT 7 [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid`,`news_time` FROM `zs_news` `a` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (16) ORDER BY news_time desc LIMIT 7 [ RunTime:0.000616s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T12:20:29+08:00 ] 192.168.10.10 192.168.10.1 GET /home/login/verify.html
+[ log ] indzs.com/home/login/verify.html [运行时间：0.254212s][吞吐率：3.93req/s] [内存消耗：373.59kb] [文件加载：72]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003491s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.017869s ]
+[ info ] [ RUN ] app\home\controller\Login->verify[ /home/vagrant/Code/independent/app/home/controller/Login.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.009795s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T12:20:33+08:00 ] 192.168.10.10 192.168.10.1 POST /home/login/runlogin.html
+[ log ] indzs.com/home/login/runlogin.html [运行时间：0.143657s][吞吐率：6.96req/s] [内存消耗：3,160.52kb] [文件加载：95]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'login',
+    2 => 'runlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://indzs.com',
+  'accept' => '*/*',
+  'content-length' => '74',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+)
+[ info ] [ PARAM ] array (
+  'member_list_username' => '440204199905313917',
+  'member_list_pwd' => '313917',
+  'verify' => 'p5pf',
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.060434s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.005823s ]
+[ info ] [ RUN ] app\home\controller\Login->runlogin[ /home/vagrant/Code/independent/app/home/controller/Login.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.003363s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000322s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_web_log` [ RunTime:0.000531s ]
+[ sql ] [ SQL ] INSERT INTO `zs_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (0 , '192.168.10.1' , '局域网 局域网  ' , 'Mac' , 'Chrome(62.0.3202.94)' , '/home/login/runlogin.html' , 'home' , 'Login' , 'runlogin' , 'Ajax' , 's:12:\"保密数据\";' , 1511756433) [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_username` = '440204199905313917' LIMIT 1 [ RunTime:0.000477s ]
+[ sql ] [ SQL ] UPDATE `zs_member_list`  SET `last_login_time`=1511756433,`last_login_ip`='192.168.10.1'  WHERE  `member_list_id` = 742 [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000426s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000207s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T12:20:33+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.173811s][吞吐率：5.75req/s] [内存消耗：682.87kb] [文件加载：84]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001667s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008823s ]
+[ info ] [ RUN ] app\home\controller\Center->index[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/user/center.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'num',
+  23 => 'major',
+  24 => 'school',
+  25 => 'recruit_major',
+  26 => 'member_list_id',
+  27 => 'member_list_username',
+  28 => 'member_list_pwd',
+  29 => 'member_list_salt',
+  30 => 'member_list_groupid',
+  31 => 'member_list_nickname',
+  32 => 'member_list_province',
+  33 => 'member_list_city',
+  34 => 'member_list_town',
+  35 => 'member_list_sex',
+  36 => 'member_list_headpic',
+  37 => 'member_list_tel',
+  38 => 'member_list_email',
+  39 => 'member_list_open',
+  40 => 'member_list_addtime',
+  41 => 'member_list_from',
+  42 => 'user_url',
+  43 => 'birthday',
+  44 => 'signature',
+  45 => 'last_login_ip',
+  46 => 'last_login_time',
+  47 => 'user_activation_key',
+  48 => 'user_status',
+  49 => 'score',
+  50 => 'coin',
+  51 => 'school_id',
+  52 => 'major_id',
+  53 => 'major_score',
+  54 => 'recruit_score',
+  55 => 'school_type',
+  56 => 'address',
+  57 => 'info',
+  58 => 'date',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004774s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000337s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000863s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000532s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` `m` INNER JOIN `zs_member_info` `mi` ON `m`.`member_list_id`=`mi`.`member_list_id` WHERE  `m`.`member_list_id` = 742 LIMIT 1 [ RunTime:0.002117s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_major` [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_major` WHERE  `major_id` = 14 LIMIT 1 [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_school` [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_school` WHERE  `school_id` = 18 LIMIT 1 [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_recruit_major` [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_recruit_major` `rm` INNER JOIN `zs_enrollment` `e` ON `e`.`recruit_major_id`=`rm`.`recruit_major_id` WHERE  `e`.`major_ids` LIKE '%,14,%'  AND `e`.`school_id` = 18 LIMIT 1 [ RunTime:0.000275s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T12:20:33+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.143234s][吞吐率：6.98req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T12:20:34+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.114351s][吞吐率：8.75req/s] [内存消耗：603.24kb] [文件加载：81]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001208s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.007414s ]
+[ info ] [ RUN ] app\home\controller\Center->index[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/user/center.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'num',
+  23 => 'major',
+  24 => 'school',
+  25 => 'recruit_major',
+  26 => 'member_list_id',
+  27 => 'member_list_username',
+  28 => 'member_list_pwd',
+  29 => 'member_list_salt',
+  30 => 'member_list_groupid',
+  31 => 'member_list_nickname',
+  32 => 'member_list_province',
+  33 => 'member_list_city',
+  34 => 'member_list_town',
+  35 => 'member_list_sex',
+  36 => 'member_list_headpic',
+  37 => 'member_list_tel',
+  38 => 'member_list_email',
+  39 => 'member_list_open',
+  40 => 'member_list_addtime',
+  41 => 'member_list_from',
+  42 => 'user_url',
+  43 => 'birthday',
+  44 => 'signature',
+  45 => 'last_login_ip',
+  46 => 'last_login_time',
+  47 => 'user_activation_key',
+  48 => 'user_status',
+  49 => 'score',
+  50 => 'coin',
+  51 => 'school_id',
+  52 => 'major_id',
+  53 => 'major_score',
+  54 => 'recruit_score',
+  55 => 'school_type',
+  56 => 'address',
+  57 => 'info',
+  58 => 'date',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004258s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000368s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000654s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000322s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` `m` INNER JOIN `zs_member_info` `mi` ON `m`.`member_list_id`=`mi`.`member_list_id` WHERE  `m`.`member_list_id` = 742 LIMIT 1 [ RunTime:0.002163s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_major` [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_major` WHERE  `major_id` = 14 LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_school` [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_school` WHERE  `school_id` = 18 LIMIT 1 [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_recruit_major` [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_recruit_major` `rm` INNER JOIN `zs_enrollment` `e` ON `e`.`recruit_major_id`=`rm`.`recruit_major_id` WHERE  `e`.`major_ids` LIKE '%,14,%'  AND `e`.`school_id` = 18 LIMIT 1 [ RunTime:0.000348s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T12:20:34+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.090380s][吞吐率：11.06req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T12:27:27+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.175372s][吞吐率：5.70req/s] [内存消耗：683.13kb] [文件加载：84]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001997s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.008668s ]
+[ info ] [ RUN ] app\home\controller\Center->index[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/user/center.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'num',
+  23 => 'major',
+  24 => 'school',
+  25 => 'recruit_major',
+  26 => 'member_list_id',
+  27 => 'member_list_username',
+  28 => 'member_list_pwd',
+  29 => 'member_list_salt',
+  30 => 'member_list_groupid',
+  31 => 'member_list_nickname',
+  32 => 'member_list_province',
+  33 => 'member_list_city',
+  34 => 'member_list_town',
+  35 => 'member_list_sex',
+  36 => 'member_list_headpic',
+  37 => 'member_list_tel',
+  38 => 'member_list_email',
+  39 => 'member_list_open',
+  40 => 'member_list_addtime',
+  41 => 'member_list_from',
+  42 => 'user_url',
+  43 => 'birthday',
+  44 => 'signature',
+  45 => 'last_login_ip',
+  46 => 'last_login_time',
+  47 => 'user_activation_key',
+  48 => 'user_status',
+  49 => 'score',
+  50 => 'coin',
+  51 => 'school_id',
+  52 => 'major_id',
+  53 => 'major_score',
+  54 => 'recruit_score',
+  55 => 'school_type',
+  56 => 'address',
+  57 => 'info',
+  58 => 'date',
+  59 => 'school_type_name',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004543s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000490s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000772s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` `m` INNER JOIN `zs_member_info` `mi` ON `m`.`member_list_id`=`mi`.`member_list_id` WHERE  `m`.`member_list_id` = 742 LIMIT 1 [ RunTime:0.001738s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_major` [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_major` WHERE  `major_id` = 14 LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_school` [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_school` WHERE  `school_id` = 18 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_recruit_major` [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_recruit_major` `rm` INNER JOIN `zs_enrollment` `e` ON `e`.`recruit_major_id`=`rm`.`recruit_major_id` WHERE  `e`.`major_ids` LIKE '%,14,%'  AND `e`.`school_id` = 18 LIMIT 1 [ RunTime:0.000286s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T12:27:27+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.104709s][吞吐率：9.55req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T12:28:31+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.169730s][吞吐率：5.89req/s] [内存消耗：603.24kb] [文件加载：81]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001615s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.011264s ]
+[ info ] [ RUN ] app\home\controller\Center->index[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/user/center.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'num',
+  23 => 'major',
+  24 => 'school',
+  25 => 'recruit_major',
+  26 => 'member_list_id',
+  27 => 'member_list_username',
+  28 => 'member_list_pwd',
+  29 => 'member_list_salt',
+  30 => 'member_list_groupid',
+  31 => 'member_list_nickname',
+  32 => 'member_list_province',
+  33 => 'member_list_city',
+  34 => 'member_list_town',
+  35 => 'member_list_sex',
+  36 => 'member_list_headpic',
+  37 => 'member_list_tel',
+  38 => 'member_list_email',
+  39 => 'member_list_open',
+  40 => 'member_list_addtime',
+  41 => 'member_list_from',
+  42 => 'user_url',
+  43 => 'birthday',
+  44 => 'signature',
+  45 => 'last_login_ip',
+  46 => 'last_login_time',
+  47 => 'user_activation_key',
+  48 => 'user_status',
+  49 => 'score',
+  50 => 'coin',
+  51 => 'school_id',
+  52 => 'major_id',
+  53 => 'major_score',
+  54 => 'recruit_score',
+  55 => 'school_type',
+  56 => 'address',
+  57 => 'info',
+  58 => 'date',
+  59 => 'school_type_name',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.007796s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000297s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` `m` INNER JOIN `zs_member_info` `mi` ON `m`.`member_list_id`=`mi`.`member_list_id` WHERE  `m`.`member_list_id` = 742 LIMIT 1 [ RunTime:0.002032s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_major` [ RunTime:0.000728s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_major` WHERE  `major_id` = 14 LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_school` [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_school` WHERE  `school_id` = 18 LIMIT 1 [ RunTime:0.000170s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_recruit_major` [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_recruit_major` `rm` INNER JOIN `zs_enrollment` `e` ON `e`.`recruit_major_id`=`rm`.`recruit_major_id` WHERE  `e`.`major_ids` LIKE '%,14,%'  AND `e`.`school_id` = 18 LIMIT 1 [ RunTime:0.000345s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T12:28:31+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.145163s][吞吐率：6.89req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T12:38:46+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.164105s][吞吐率：6.09req/s] [内存消耗：683.03kb] [文件加载：84]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001923s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.010117s ]
+[ info ] [ RUN ] app\home\controller\Center->index[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/user/center.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'num',
+  23 => 'major',
+  24 => 'school',
+  25 => 'recruit_major',
+  26 => 'member_list_id',
+  27 => 'member_list_username',
+  28 => 'member_list_pwd',
+  29 => 'member_list_salt',
+  30 => 'member_list_groupid',
+  31 => 'member_list_nickname',
+  32 => 'member_list_province',
+  33 => 'member_list_city',
+  34 => 'member_list_town',
+  35 => 'member_list_sex',
+  36 => 'member_list_headpic',
+  37 => 'member_list_tel',
+  38 => 'member_list_email',
+  39 => 'member_list_open',
+  40 => 'member_list_addtime',
+  41 => 'member_list_from',
+  42 => 'user_url',
+  43 => 'birthday',
+  44 => 'signature',
+  45 => 'last_login_ip',
+  46 => 'last_login_time',
+  47 => 'user_activation_key',
+  48 => 'user_status',
+  49 => 'score',
+  50 => 'coin',
+  51 => 'school_id',
+  52 => 'major_id',
+  53 => 'major_score',
+  54 => 'recruit_score',
+  55 => 'school_type',
+  56 => 'address',
+  57 => 'info',
+  58 => 'date',
+  59 => 'school_type_name',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.003552s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000798s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000975s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000539s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000543s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` `m` INNER JOIN `zs_member_info` `mi` ON `m`.`member_list_id`=`mi`.`member_list_id` WHERE  `m`.`member_list_id` = 742 LIMIT 1 [ RunTime:0.002062s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_major` [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_major` WHERE  `major_id` = 14 LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_school` [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_school` WHERE  `school_id` = 18 LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_recruit_major` [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_recruit_major` `rm` INNER JOIN `zs_enrollment` `e` ON `e`.`recruit_major_id`=`rm`.`recruit_major_id` WHERE  `e`.`major_ids` LIKE '%,14,%'  AND `e`.`school_id` = 18 LIMIT 1 [ RunTime:0.000489s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T12:38:46+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.142594s][吞吐率：7.01req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T12:38:55+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.219447s][吞吐率：4.56req/s] [内存消耗：683.03kb] [文件加载：84]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.002578s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.011304s ]
+[ info ] [ RUN ] app\home\controller\Center->index[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/user/center.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'num',
+  23 => 'major',
+  24 => 'school',
+  25 => 'recruit_major',
+  26 => 'member_list_id',
+  27 => 'member_list_username',
+  28 => 'member_list_pwd',
+  29 => 'member_list_salt',
+  30 => 'member_list_groupid',
+  31 => 'member_list_nickname',
+  32 => 'member_list_province',
+  33 => 'member_list_city',
+  34 => 'member_list_town',
+  35 => 'member_list_sex',
+  36 => 'member_list_headpic',
+  37 => 'member_list_tel',
+  38 => 'member_list_email',
+  39 => 'member_list_open',
+  40 => 'member_list_addtime',
+  41 => 'member_list_from',
+  42 => 'user_url',
+  43 => 'birthday',
+  44 => 'signature',
+  45 => 'last_login_ip',
+  46 => 'last_login_time',
+  47 => 'user_activation_key',
+  48 => 'user_status',
+  49 => 'score',
+  50 => 'coin',
+  51 => 'school_id',
+  52 => 'major_id',
+  53 => 'major_score',
+  54 => 'recruit_score',
+  55 => 'school_type',
+  56 => 'address',
+  57 => 'info',
+  58 => 'date',
+  59 => 'school_type_name',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005767s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000353s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000242s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` `m` INNER JOIN `zs_member_info` `mi` ON `m`.`member_list_id`=`mi`.`member_list_id` WHERE  `m`.`member_list_id` = 742 LIMIT 1 [ RunTime:0.002104s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_major` [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_major` WHERE  `major_id` = 14 LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_school` [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_school` WHERE  `school_id` = 18 LIMIT 1 [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_recruit_major` [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_recruit_major` `rm` INNER JOIN `zs_enrollment` `e` ON `e`.`recruit_major_id`=`rm`.`recruit_major_id` WHERE  `e`.`major_ids` LIKE '%,14,%'  AND `e`.`school_id` = 18 LIMIT 1 [ RunTime:0.000276s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T12:38:55+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.099230s][吞吐率：10.08req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T12:50:56+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.287022s][吞吐率：3.48req/s] [内存消耗：682.87kb] [文件加载：84]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003508s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009802s ]
+[ info ] [ RUN ] app\home\controller\Center->index[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/user/center.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'num',
+  23 => 'major',
+  24 => 'school',
+  25 => 'recruit_major',
+  26 => 'member_list_id',
+  27 => 'member_list_username',
+  28 => 'member_list_pwd',
+  29 => 'member_list_salt',
+  30 => 'member_list_groupid',
+  31 => 'member_list_nickname',
+  32 => 'member_list_province',
+  33 => 'member_list_city',
+  34 => 'member_list_town',
+  35 => 'member_list_sex',
+  36 => 'member_list_headpic',
+  37 => 'member_list_tel',
+  38 => 'member_list_email',
+  39 => 'member_list_open',
+  40 => 'member_list_addtime',
+  41 => 'member_list_from',
+  42 => 'user_url',
+  43 => 'birthday',
+  44 => 'signature',
+  45 => 'last_login_ip',
+  46 => 'last_login_time',
+  47 => 'user_activation_key',
+  48 => 'user_status',
+  49 => 'score',
+  50 => 'coin',
+  51 => 'school_id',
+  52 => 'major_id',
+  53 => 'major_score',
+  54 => 'recruit_score',
+  55 => 'school_type',
+  56 => 'address',
+  57 => 'info',
+  58 => 'date',
+  59 => 'school_type_name',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005654s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000347s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000749s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` `m` INNER JOIN `zs_member_info` `mi` ON `m`.`member_list_id`=`mi`.`member_list_id` WHERE  `m`.`member_list_id` = 742 LIMIT 1 [ RunTime:0.001790s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_major` [ RunTime:0.000550s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_major` WHERE  `major_id` = 14 LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_school` [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_school` WHERE  `school_id` = 18 LIMIT 1 [ RunTime:0.000230s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_recruit_major` [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_recruit_major` `rm` INNER JOIN `zs_enrollment` `e` ON `e`.`recruit_major_id`=`rm`.`recruit_major_id` WHERE  `e`.`major_ids` LIKE '%,14,%'  AND `e`.`school_id` = 18 LIMIT 1 [ RunTime:0.000367s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T12:50:56+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.156049s][吞吐率：6.41req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T16:22:05+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.098937s][吞吐率：10.11req/s] [内存消耗：371.78kb] [文件加载：69]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001722s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/vagrant/Code/independent/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'code',
+  23 => 'msg',
+  24 => 'data',
+  25 => 'url',
+  26 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.004538s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T16:22:07+08:00 ] 192.168.10.10 192.168.10.1 GET /
+[ log ] indzs.com/ [运行时间：0.196914s][吞吐率：5.08req/s] [内存消耗：622.80kb] [文件加载：80]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'Index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.004211s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.012424s ]
+[ info ] [ RUN ] app\home\controller\Index->index[ /home/vagrant/Code/independent/app/home/controller/Index.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/index.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005836s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000348s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_news` [ RunTime:0.000832s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid`,`news_time` FROM `zs_news` `a` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (17) ORDER BY news_time desc LIMIT 7 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid`,`news_time` FROM `zs_news` `a` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (18) ORDER BY news_time desc LIMIT 7 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT `news_content`,`news_title`,`n_id`,`news_columnid`,`news_time` FROM `zs_news` `a` WHERE  `news_open` = '1'  AND `news_l` = 'zh-cn'  AND `news_back` = 0  AND `news_columnid` IN (16) ORDER BY news_time desc LIMIT 7 [ RunTime:0.000577s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T16:22:07+08:00 ] 192.168.10.10 192.168.10.1 GET /home/login/verify.html
+[ log ] indzs.com/home/login/verify.html [运行时间：0.278251s][吞吐率：3.59req/s] [内存消耗：373.59kb] [文件加载：72]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'login',
+    2 => 'verify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.003631s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.018844s ]
+[ info ] [ RUN ] app\home\controller\Login->verify[ /home/vagrant/Code/independent/app/home/controller/Login.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.011060s ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-11-27T16:22:12+08:00 ] 192.168.10.10 192.168.10.1 POST /home/login/runlogin.html
+[ log ] indzs.com/home/login/runlogin.html [运行时间：0.138257s][吞吐率：7.23req/s] [内存消耗：3,160.52kb] [文件加载：95]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'login',
+    2 => 'runlogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://indzs.com',
+  'accept' => '*/*',
+  'content-length' => '74',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+)
+[ info ] [ PARAM ] array (
+  'member_list_username' => '440204199905313917',
+  'member_list_pwd' => '313917',
+  'verify' => 'ewqd',
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.057814s ]
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.005997s ]
+[ info ] [ RUN ] app\home\controller\Login->runlogin[ /home/vagrant/Code/independent/app/home/controller/Login.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.003518s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000287s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_web_log` [ RunTime:0.000584s ]
+[ sql ] [ SQL ] INSERT INTO `zs_web_log` (`uid` , `ip` , `location` , `os` , `browser` , `url` , `module` , `controller` , `action` , `method` , `data` , `otime`) VALUES (0 , '192.168.10.1' , '局域网 局域网  ' , 'Mac' , 'Chrome(62.0.3202.94)' , '/home/login/runlogin.html' , 'home' , 'Login' , 'runlogin' , 'Ajax' , 's:12:\"保密数据\";' , 1511770932) [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_username` = '440204199905313917' LIMIT 1 [ RunTime:0.000455s ]
+[ sql ] [ SQL ] UPDATE `zs_member_list`  SET `last_login_time`=1511770932,`last_login_ip`='192.168.10.1'  WHERE  `member_list_id` = 742 [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000199s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T16:22:12+08:00 ] 192.168.10.10 192.168.10.1 GET /home/center/index.html
+[ log ] indzs.com/home/center/index.html [运行时间：0.173333s][吞吐率：5.77req/s] [内存消耗：692.50kb] [文件加载：84]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'center',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/home/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\WebLog @module_init [ RunTime:0.001560s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run Closure @action_begin [ RunTime:0.009309s ]
+[ info ] [ RUN ] app\home\controller\Center->index[ /home/vagrant/Code/independent/app/home/controller/Center.php ]
+[ info ] [ VIEW ] /home/vagrant/Code/independent/app/home/view/default/user/center.html [ array (
+  0 => 'lang',
+  1 => 'map_lat',
+  2 => 'map_lng',
+  3 => 'site_name',
+  4 => 'site_host',
+  5 => 'site_tpl',
+  6 => 'site_tpl_m',
+  7 => 'site_logo',
+  8 => 'site_icp',
+  9 => 'site_tongji',
+  10 => 'site_copyright',
+  11 => 'site_co_name',
+  12 => 'site_address',
+  13 => 'site_tel',
+  14 => 'site_admin_email',
+  15 => 'site_qq',
+  16 => 'site_seo_title',
+  17 => 'site_seo_keywords',
+  18 => 'site_seo_description',
+  19 => 'yf_theme_path',
+  20 => 'user',
+  21 => 'is_admin',
+  22 => 'num',
+  23 => 'major',
+  24 => 'school',
+  25 => 'recruit_major',
+  26 => 'member_list_id',
+  27 => 'member_list_username',
+  28 => 'member_list_pwd',
+  29 => 'member_list_salt',
+  30 => 'member_list_groupid',
+  31 => 'member_list_nickname',
+  32 => 'member_list_province',
+  33 => 'member_list_city',
+  34 => 'member_list_town',
+  35 => 'member_list_sex',
+  36 => 'member_list_headpic',
+  37 => 'member_list_tel',
+  38 => 'member_list_email',
+  39 => 'member_list_open',
+  40 => 'member_list_addtime',
+  41 => 'member_list_from',
+  42 => 'user_url',
+  43 => 'birthday',
+  44 => 'signature',
+  45 => 'last_login_ip',
+  46 => 'last_login_time',
+  47 => 'user_activation_key',
+  48 => 'user_status',
+  49 => 'score',
+  50 => 'coin',
+  51 => 'school_id',
+  52 => 'major_id',
+  53 => 'major_score',
+  54 => 'recruit_score',
+  55 => 'school_type',
+  56 => 'address',
+  57 => 'info',
+  58 => 'date',
+  59 => 'school_type_name',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\Cron @app_end [ RunTime:0.005537s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000290s ] mysql:dbname=independent;host=localhost;port=33060;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_member_list` [ RunTime:0.000673s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` WHERE  `member_list_id` = 742 LIMIT 1 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_admin` [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_admin` WHERE  `member_id` = 742 LIMIT 1 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_member_list` `m` INNER JOIN `zs_member_info` `mi` ON `m`.`member_list_id`=`mi`.`member_list_id` WHERE  `m`.`member_list_id` = 742 LIMIT 1 [ RunTime:0.001842s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_major` [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_major` WHERE  `major_id` = 14 LIMIT 1 [ RunTime:0.000179s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_school` [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_school` WHERE  `school_id` = 18 LIMIT 1 [ RunTime:0.000155s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zs_recruit_major` [ RunTime:0.000604s ]
+[ sql ] [ SQL ] SELECT * FROM `zs_recruit_major` `rm` INNER JOIN `zs_enrollment` `e` ON `e`.`recruit_major_id`=`rm`.`recruit_major_id` WHERE  `e`.`major_ids` LIKE '%,14,%'  AND `e`.`school_id` = 18 LIMIT 1 [ RunTime:0.000345s ]
+
+---------------------------------------------------------------
+[ 2017-11-27T16:22:12+08:00 ] 192.168.10.10 192.168.10.1 GET /data/upload/avatar/590fcacb104cb.jpg
+[ log ] indzs.com/data/upload/avatar/590fcacb104cb.jpg [运行时间：0.145399s][吞吐率：6.88req/s] [内存消耗：248.25kb] [文件加载：53]
+[ info ] [ LANG ] /home/vagrant/Code/independent/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/vagrant/Code/independent/app/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'data',
+    1 => 'upload',
+    2 => 'avatar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=g5g4qs1iumonasmec6g29k7l99; think_var=zh-cn',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://indzs.com/home/center/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'indzs.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

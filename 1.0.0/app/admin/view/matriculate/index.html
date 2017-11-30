@@ -1,0 +1,35 @@
+{extend name="admin@public/base" /}
+{block name="main-content"}
+	<div class="page-content">
+
+		<div class="row maintop">
+
+
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div>
+					<form id="alldel" name="alldel" method="post" action="/admin/member/open.html">
+					<table class="table table-striped table-bordered table-hover" id="dynamic-table">
+						<thead>
+						<tr>
+							<th>姓名</th>
+							<th>身份证</th>
+                            <th>招生专业</th>
+							<th>总分</th>
+                            <th>排名</th>
+							<th>是否录取</th>
+						</tr>
+						</thead>
+
+						<tbody id="ajax-data">
+							{include file="matriculate/ajax_list"/}
+						</tbody>
+					</table>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div><!-- /.page-content -->
+{/block}

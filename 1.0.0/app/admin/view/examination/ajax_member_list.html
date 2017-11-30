@@ -1,0 +1,17 @@
+{if condition="!empty($members)"}
+{foreach name="members" item="v"}
+    <tr>
+        <td>{$v.room_name}</td>
+        <td>{$v.room_no}</td>
+        <td>{$v.member_list_nickname}</td>
+        <td>{$v.GexamineeNumber}</td>
+    </tr>
+{/foreach}
+{else}
+    <tr>
+        <td colspan="20" align="center">暂无数据</td>
+    </tr>
+{/if}
+<tr>
+	<td colspan="12" align="center" class="hidden-xs">{$page}</td>
+</tr>
