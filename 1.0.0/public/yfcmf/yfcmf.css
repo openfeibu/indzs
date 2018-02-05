@@ -29,3 +29,9 @@
 .score_input {
     width:70px;
 }
+.tr_active{
+    background: #428db9;
+}
+.tr_active:hover{
+    background: #428db9;
+}

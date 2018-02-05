@@ -259,6 +259,34 @@ $(function () {
         }, "json");
         return false;
     });
+	$('body').on('click','.member_info_status_btn',function () {
+        var $url =$(this).parent().attr('href'),
+            member_list_id = $(this).parent().attr('data-id'),
+			info_status = $(this).attr('value');
+            $btn=$(this);
+		console.log($url);
+        $.post($url, {'member_list_id': member_list_id,'info_status':info_status}, function (data) {
+            if (data.code==1) {
+				if (data.msg == '已通过') {
+					$btn.siblings().remove();
+                    $btn.html('已通过，点击取消通过审核');
+					$btn.attr('value','-1');
+					$btn.removeClass('btn-primary').addClass('btn-danger');
+					//$('.member_table').find('input').attr('disabled',true);
+					return false;
+                } else {
+					$btn.siblings().remove();
+					$btn.html('未通过，点击通过审核');
+					$btn.attr('value','1');
+                    $btn.removeClass('btn-danger').addClass('btn-primary');
+                    return false;
+                }
+            } else {
+                layer.alert(data.msg, {icon: 5});
+            }
+        }, "json");
+        return false;
+    });
 });
 /*************************************************************************** 所有ajaxForm提交 ********************************************************/
 /* 通用表单不带检查操作，失败不跳转 */
@@ -930,9 +958,30 @@ $(function () {
 })(jQuery);
 /*************************************************************************** 选择列表框change事件********************************************************/
 (function ($) {
+	$("body").on('change','.togetsubjects',function(){
+		var enrollment_id = $(this).val();
+		load = layer.load(2);
+		var $form = $(this).parents("form");
+		$.ajax({
+			url: "/admin/Score/ajax_enrollment_subjects",
+			data:{'enrollment_id':enrollment_id},
+			success: function(data){
+				$("#subjects").html(data.html);
+				$.ajax({
+				    url:$form.attr('action'),
+					type:"POST",
+					data:$form.serialize(),
+					success: function(data,status){
+						if(typeof load!="undefined"){layer.close(load);}
+						$("#ajax-data").html(data);
+					}
+				});
+			}
+		});
+	});
 	$('body').on('change','.ajax_change',function () {
 		load = layer.load(2);
-        var $form = $(this).parents("form");
+		var $form = $(this).parents("form");
 		$.ajax({
 		    url:$form.attr('action'),
 			type:"POST",
@@ -1150,6 +1199,7 @@ $(function(){
 			}
 		});
 	});
+
 	$('body').on('blur','.member_GexamineeNumber',function () {
 		var url = $(this).attr('url');
 		GexamineeNumber = $.trim($(this).val());
@@ -1262,6 +1312,7 @@ $(function(){
 	// $('.major_score').blur(function(){
 	//
 	// });
+	/*
 	$("body").on('blur','.major_score',function(){
 
 		$this = $(this);
@@ -1270,7 +1321,7 @@ $(function(){
 		value = $this.val();
 
         if(!reg.test(value)){
-			$this.after('<span class="save_span">格式不挣钱</span>');
+			$this.after('<span class="save_span">格式不正确</span>');
 			$('.save_span').fadeOut('normal').remove();
 			$this.val('');
 			return false;
@@ -1307,9 +1358,45 @@ $(function(){
 			});
 		}
 	});
+	*/
+
+	$("body").on('blur','.major_score',function(){
+
+		$this = $(this);
+		var reg = /^[0-9]+.?[0-9]*$/;
+		$this = $(this);
+		value = $this.val();
+
+        if(!reg.test(value)){
+			$this.after('<span class="save_span">格式不正确</span>');
+			$('.save_span').fadeOut('normal').remove();
+			$this.val('');
+			return false;
+		}
+
+		member_list_id = $this.parent().attr('data-id');
+		subject_id = $this.attr('data-id');
+		major_score  = value.replace(/\.\d{1,}$/,value.substr(value.indexOf('.'),2));
+		$this.val(major_score);
+
+		var html = '<img src="/public/img/loading.gif" id="loading_img">';
+		$this.after(html);
+		$.ajax({
+			type:"POST",
+			url: "/admin/score/score_runadd",
+			data:{'member_list_id':member_list_id,'score':major_score,'subject_id':subject_id},
+			success: function(data){
+				$('#loading_img').remove();
+				$this.after('<span class="save_span">已保存</span>');
+				var html = '<span style="color:#3499DB;font-weight: bold;">审核中</span>';
+				$(".status_" + member_list_id).html(html);
+				$('.save_span').fadeOut('normal').remove();
+			}
+		});
+	});
 	$(".generate").click(function(){
 		url = $(this).attr('url');
-		layer.confirm('将重新设置考场管理员和安排考试？', {
+		layer.confirm('将重新设置考场管理员', {
 		  btn: ['确定','取消'] //按钮
 		}, function(){
 			index = layer.load(1);
@@ -1328,7 +1415,55 @@ $(function(){
 
         return false;
 
-	})
+	});
+	$(".generatebtn").click(function(){
+		url = '/admin/examination/generate_member';
+		subject_id = $(this).attr('data-id');
+		subject_name = $(this).attr('data-name');
+		layer.confirm('将重新分配'+subject_name+'数据？', {
+		  btn: ['确定','取消'] //按钮
+		}, function(){
+			index = layer.load(1);
+			$.ajax({
+				type:"POST",
+				url:url,
+				data:{'subject_id':subject_id},
+				success: function(data){
+					layer.close(index);
+					layer.alert(data.msg, {icon: 6});
+					console.log(data.code);
+				}
+			});
+		}, function(){
+
+		});
+
+		return false;
+	});
+	$(".edit_publicity").click(function(){
+		$this = $(this);
+		url = $(this).attr('url');
+		layer.confirm('确认公示结果么？', {
+		  btn: ['确定','取消'] //按钮
+		}, function(){
+			index = layer.load(1);
+			$.ajax({
+				type:"POST",
+				url:url,
+				data:{},
+				success: function(data){
+					layer.close(index);
+					layer.alert(data.msg, {icon: 6});
+					$this.find("button").attr('disabled',true).text("已公示结果");
+					console.log(data.code);
+				}
+			});
+		}, function(){
+
+		});
+
+		return false;
+	});
 });
 function member_active()
 {
