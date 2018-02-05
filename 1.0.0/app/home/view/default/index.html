@@ -12,25 +12,62 @@
             </div>
             {else}
             <div class="login-title">自主招生报名登录</div>
-            <form action="{:url('home/Login/runlogin')}" method="post">
-                <div class="input-item">
-                     <label for="">身份证：</label>
-                     <input type="text" name="member_list_username">
-                </div>
-                <div class="input-item">
-                     <label for="">密  码：</label>
-                     <input type="password" name="member_list_pwd">
-                </div>
-                <div class="input-item">
-                     <label for="">验证码：</label>
-                     <input type="text" name="verify" style="width:70px"/>
-                     <div class="code">
-                       <img src="{:url('home/Login/verify')}"  onClick="this.src='{:url('home/Login/verify')}'+'?'+Math.random()" class="verify" >
-                     </div>
+                <div class="loginDiv">
+                    <form action="{:url('home/Login/runlogin')}" method="post" class="loginForm">
+                        <div class="input-item">
+                             <label for="">身份证：</label>
+                             <input type="text" name="member_list_username">
+                        </div>
+                        <div class="input-item">
+                             <label for="">密  码：</label>
+                             <input type="password" name="member_list_pwd">
+                        </div>
+                        <div class="input-item">
+                             <label for="">验证码：</label>
+                             <input type="text" name="verify" style="width:70px"/>
+                             <div class="code">
+                               <img src="{:url('home/Login/verify')}"  onClick="this.src='{:url('home/Login/verify')}'+'?'+Math.random()" class="verify loginverify" >
+                             </div>
 
-                   </div>
-               <input type="submit" value="登录">
-            </form>
+                           </div>
+                       <input type="submit" value="登录"> <button class="toregbtn toRegister" type="button">前往注册</button>
+
+                   </form>
+               </div>
+               <div class="registerDiv">
+                   <form action="{:url('home/Register/runregister')}" method="post" class="registerForm">
+                       <div class="input-item">
+                            <label for="">身份证：</label>
+                            <input type="text" name="member_list_username">
+                       </div>
+                       <div class="input-item">
+                            <label for="">学生类型：</label>
+                            <select name="examinee_type_id">
+                                {foreach name="examinee_type" item="v" key="k"}
+                                    <option value="{$v.examinee_type_id}">{$v.name}</option>
+    							{/foreach}
+                            </select>
+                       </div>
+                       <div class="input-item">
+                            <label for="">密  码：</label>
+                            <input type="password" name="password">
+                       </div>
+                       <div class="input-item">
+                            <label for="">确认密码：</label>
+                            <input type="password" name="repassword">
+                       </div>
+                       <div class="input-item">
+                           <label for="">验证码：</label>
+                           <input type="text" name="verify" style="width:70px"/>
+                           <div class="code">
+                               <img src="{:url('home/Register/verify')}"  onClick="this.src='{:url('home/Register/verify')}'+'?'+Math.random()" class="verify regverify" >
+                           </div>
+                       </div>
+                       <input type="submit" value="注册"> <button class="toregbtn toLogin" type="button">前往登录</button>
+                   </form>
+               </div>
+
+
             {/if}
         </div>
         <!-- 登录 -->
@@ -186,20 +223,32 @@
     <!-- 主体内容 E -->
 {include file="public:footer" /}
 <script type="text/javascript">
-  $(".login form").on("submit",function(){
+  $(".loginForm").on("submit",function(){
      var form = $(this).serialize();
-    $.post("{:url('home/Login/runlogin')}",form,function(data){
+     $.post("{:url('home/Login/runlogin')}",form,function(data){
         if(data.code == 1){
           // success
           window.location.href = '{:url('home/center/index')}';
         }else if (data.code == 0){
-            $(".verify").attr('src',"{:url('home/Login/verify')}"+'?'+Math.random())
+            $(".loginverify").attr('src',"{:url('home/Login/verify')}"+'?'+Math.random())
             alert(data.msg);
         }
 
     });
+    return false;
+  })
+  $(".registerForm").on("submit",function(){
+     var form = $(this).serialize();
+     $.post("{:url('home/Register/runregister')}",form,function(data){
+        if(data.code == 1){
+          // success
+          window.location.href = '{:url('home/center/index')}';
+        }else if (data.code == 0){
+            $(".regverify").attr('src',"{:url('home/Register/verify')}"+'?'+Math.random())
+            alert(data.msg);
+        }
 
-
+    });
     return false;
   })
 </script>

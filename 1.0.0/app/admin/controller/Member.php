@@ -54,19 +54,6 @@ class Member extends Base
 		foreach ($data as $k => $value) {
 
 		}
-		/*
-		if($this->admin['major_id'])
-		{
-			$major_ids = json_decode($this->admin['major_id'],true);
-			$major = Db::name('major')->where(array('major_id' => array('in',$major_ids)))->find();
-			$major_score_key =array_filter(json_decode($major['score'],true));
-			$this->assign('major_score_key',$major_score_key);
-		}*/
-
-		$school_list = Db::name('school')->select();
-
-
-		$this->assign('school_list',$school_list);
 		$this->assign('opentype_check',$opentype_check);
 		$this->assign('activetype_check',$activetype_check);
 		$this->assign('member_list',$data);
@@ -371,7 +358,19 @@ class Member extends Base
 			$this->success('已通过');
 		}
 	}
-
+	public function member_check()
+	{
+		$id=input('member_list_id');
+		$member_model=new MemberList;
+		$statedata = array('info_status'=> input('info_status'));
+		$member_model->where(array('member_list_id'=>$id))->setField($statedata);
+		if(input('info_status') == 1)
+		{
+			$this->success('已通过');
+		}else{
+			$this->success('未通过');
+		}
+	}
 	/*
      * 学生删除
      */

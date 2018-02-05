@@ -1,0 +1,39 @@
+{include file="public:head_center" /}
+    <!-- 主体内容 S -->
+    <div class="main w1000" style="background:#fff;">
+
+       <div class="myexam">
+           <!--startprint1-->
+           <table width="800" style="margin:0 auto;border-radio:5px;">
+                <tr class="line-table-height" style="color:#333;font-size:16px;background:#971f21;color:#fff;line-height:35px">
+                    <td class="k-s-content" >排名</td>
+                    <td class="k-s-content" >姓名</td>
+                    {foreach name="subjects" item="v"}
+                    <td class="k-s-content" >{$v.subject_name}</td>
+                    {/foreach}
+                    <td class="k-s-content" >总分</td>
+                    <th>录取公示通过状态</th>
+               </tr>
+               {foreach name="data" item="v"}
+               <tr class="line-table-height {if $v.member_list_id == $user.member_list_id}is_active{/if}">
+                   <td class="k-s-content">
+                       <label class="pos-rel">
+                           <span class="lbl"></span>
+                       </label>{$v.no}
+                   </td>
+                   <td class="k-s-content">{$v.member_list_nickname}</td>
+                   {foreach name="$v['score_arr']" item="val"}
+                   <td class="k-s-content">{$val.score} </td>
+                   {/foreach}
+                   </td>
+                   <td class="k-s-content">{$v['score_total']}</td>
+                   <td class="k-s-content">{$v['pass_status']}</td>
+               </tr>
+               {/foreach}
+           </table>
+           <!--endtprint1-->
+
+       </div>
+
+    </div>
+{include  file="public:footer" /}

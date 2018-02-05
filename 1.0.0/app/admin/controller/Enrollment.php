@@ -6,6 +6,7 @@ use app\admin\model\School as SchoolModel;
 use app\admin\model\Major as MajorModel;
 use app\admin\model\Enrollment as EnrollmentModel;
 use app\admin\model\RecruitMajor as RecruitMajorModel;
+use app\admin\model\ExamineeType as ExamineeTypeModel;
 use app\admin\model\MajorScoreConfig as MajorScoreConfigModel;
 use think\Db;
 use think\Cache;
@@ -16,16 +17,15 @@ class Enrollment extends Base
 	{
 		$recruit_major_list = Db::name('recruit_major')->select();
 		$this->assign('recruit_major_list',$recruit_major_list);
-		$school_types = config('school_type');
-		$this->assign('school_types',$school_types);
+        $examinee_type = ExamineeTypeModel::getExamineeTypes();
+        $this->assign('examinee_type',$examinee_type);
 		return $this->fetch();
 	}
 	public function enrollment_runadd()
 	{
-
 		$data = [
 			'recruit_major_id' => input('recruit_major_id'),
-			'school_type' => input('school_type'),
+			'examinee_type' => implode(',',$_POST['examinee_type']),
 			'enrollment_number' => input('enrollment_number'),
 		];
 		EnrollmentModel::create($data);
@@ -40,9 +40,9 @@ class Enrollment extends Base
         }
  		$recruit_major_list = Db::name('recruit_major')->select();
 		$this->assign('recruit_major_list',$recruit_major_list);
-        $school_types = config('school_type');
-        $this->assign('school_types',$school_types);
         $this->assign('enrollment',$enrollment);
+        $examinee_type = ExamineeTypeModel::getExamineeTypes();
+        $this->assign('examinee_type',$examinee_type);
 		return $this->fetch();
 	}
 	public function enrollment_runedit()
@@ -55,6 +55,7 @@ class Enrollment extends Base
 		$data = [
 			'recruit_major_id' => input('recruit_major_id'),
 			'enrollment_number' => input('enrollment_number'),
+            'examinee_type' => implode(',',$_POST['examinee_type']),
 		];
         $rst = Db::name('enrollment')->where(['enrollment_id' => $enrollment_id])->update($data);
 
@@ -75,7 +76,7 @@ class Enrollment extends Base
         $member_list = Db::name('member_list')->where(['school_id' => $enrollment['school_id']])->select();
         if($admin_list || $member_list)
         {
-            return $this->error('请先删除与该招生计划关联学校下的中职负责人及中职学生数据');
+            return $this->error('请先删除与该招生计划关联学校下的中职负责人及报考学生数据');
         }
         $rst = $enrollment_model->where(array('enrollment_id'=>$enrollment_id))->delete();
         if($rst!==false){
@@ -107,7 +108,7 @@ class Enrollment extends Base
         $member_list = Db::name('member_list')->where(['school_id' => ['in',$school_ids]])->select();
         if($admin_list || $member_list)
         {
-            return $this->error('请先删除与该招生计划关联学校下的中职负责人及中职学生数据');
+            return $this->error('请先删除与该招生计划关联学校下的中职负责人及报考学生数据');
         }
         $rst = $enrollment_model->where($where)->delete();
         if($rst!==false){
@@ -120,15 +121,24 @@ class Enrollment extends Base
 	{
 		$enrollments = Db::name('enrollment')->alias('e')
 							->join(config('database.prefix').'recruit_major rm','e.recruit_major_id = rm.recruit_major_id')
+                            ->order('rm.recruit_major_id ASC')
+                            ->order('e.enrollment_id ASC')
 							->select();
-
 
 		foreach ($enrollments as $key => $enrollment) {
 			$enrollments[$key]['school_type'] = config('school_type')[$enrollment['school_type']];
+            $enrollments[$key] = EnrollmentModel::handleEnrollment($enrollment);
 		}
+
 		$this->assign('enrollments',$enrollments);
 		return $this->fetch();
 	}
+    public function edit_publicity()
+    {
+        $name = input('name','write');
+        Db::name('publicity_setting')->where(['name' => $name])->update(['starttime' => time()]);
+        $this->success('操作成功');
+    }
 	public function export_enrollment()
 	{
 		$enrollments = Db::name('enrollment')->alias('e')

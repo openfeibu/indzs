@@ -21,16 +21,58 @@ class Payment extends Base
     {
 		return $this->view->fetch('payment:index');
 	}
+	public function runexaminationpay()
+	{
+
+			$time = time();
+			$payment_model=Db::name("payment");
+			$out_trade_no = createPayid();
+            $money = 50;
+            $paytype = input('pay_type');
+            $product_name = '笔试缴费';
+            $product_body = '笔试缴费';
+            $pay_config = config("payment.{$paytype}");
+            if(empty($pay_config['display'])){
+                $return_data = array('coode'=>'eroor','info'=>'支付方式未开启或未配置!!');
+                return $return_data;
+                exit();
+            }
+            if(!$money || !$paytype){
+                $return_data = array('coode'=>'eroor','info'=>'订单参数错误,获取不完整!!');
+                return $return_data;
+                exit();
+            }
+			$sl_data = array(
+				'out_trade_no' => $out_trade_no,
+				'money'        => $money,
+				'status'       => 0,
+				'type'         => $paytype,
+				'uid'          => 1,
+				'create_time'  => $time,
+				'update_time'  => $time,
+				'client_ip'    => request()->ip(),
+				'product_name' => $product_name,
+				'product_body' => $product_body
+				);
+			$rst=$payment_model->insertGetId($sl_data);
+			if($rst){
+				//$this->redirect('home/payment/dopay',array('out_trade_no'=>$out_trade_no,'sign'=>md5($out_trade_no.request()->ip())));
+                $url = '/home/payment/dopay?out_trade_no='.$out_trade_no.'&sign='.md5($out_trade_no.request()->ip());
+                $return_data = array('code'=>'SUCCESS','paytype'=>$paytype,'info'=>'生成订单成功,准备跳转支付页面!!','url'=>$url
+                    );
+                header('Location:'.$url);
+			}
+	}
 	public function runpay()
     {
+		var_dump(1);exit;
 		if (!request()->isAjax()){
 			$this->error('提交方式不正确',url('home/payment/index'));
 		}else{
-			$charge = new ChargeContext();
 			$time = time();
 			$payment_model=Db::name("payment");
-			$out_trade_no = $charge->createPayid();
-            $money = input('coins'); 
+			$out_trade_no = createPayid();
+            $money = input('coins');
             $paytype = input('pay_type');
             $product_name = input('product_name');
             $product_body = input('product_body');
@@ -85,25 +127,25 @@ class Payment extends Base
                 "body"      => $pay_info['product_body'],
                 "show_url"  => $pay_info['product_url'],// 支付宝手机网站支付接口 该参数必须上传 。其他接口忽略
                 "extra_param"   => $pay_info['extra_param'],
-            ]; 
+            ];
             $payData['product_id']  = '123456';
-            //获取OPENID 
+            //获取OPENID
             // TODO 暂时先用COOKE之后改查数据表
             if($pay_type=='wxpaypub' || $pay_type=='wxpayapp'){
                 $openid=isset($_COOKIE['openid'])?$_COOKIE['openid']:'';
                 if(empty($openid)){
-                    $url = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"]; 
-                    //绑定要设定cookie  setcookie('openid',$openid,time()+86400*30);  
-                    $this->redirect('home/Oauth/bang',array('type'=>'Wechat','redirect'=>$url));  
+                    $url = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+                    //绑定要设定cookie  setcookie('openid',$openid,time()+86400*30);
+                    $this->redirect('home/Oauth/bang',array('type'=>'Wechat','redirect'=>$url));
                 }else{
                 $payData['openid']=$openid;
-                }              
+                }
             }
             //获取OPENID结束
             $charge = new ChargeContext();
             try {
             	switch ($pay_type){
-            	        case 'aliwappay':  
+            	        case 'aliwappay':
             	        $type = Config::ALI_CHANNEL_WAP;
                         break;
                         case 'alipay':
@@ -154,7 +196,7 @@ class Payment extends Base
 		}
 
 	}
-    
+
     /*支付成功-跳转页面*/
     public function pay_success()
     {
@@ -223,5 +265,5 @@ class Payment extends Base
     }
 
 
-	
+
 }

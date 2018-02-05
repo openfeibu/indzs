@@ -13,13 +13,13 @@ return [
     // 数据库类型
     'type'           => 'mysql',
 
-    'hostname'       => 'localhost',
+    'hostname'       => '120.76.200.232',
     // 数据库名
     'database'       => 'independent',
     // 用户名
-    'username'       => 'homestead',
+    'username'       => 'feibukeji',
     // 密码
-    'password'       => 'secret',
+    'password'       => 'bgyrtksithv,1*&($AC',
     /*
 
     // 服务器地址
@@ -32,7 +32,7 @@ return [
     'password'       => 'bgyrtksithv,1*&($AC',
 */
     // 端口
-    'hostport'       => '33060',
+    'hostport'       => '16822',
     // 连接dsn
     'dsn'            => '',
     // 数据库连接参数

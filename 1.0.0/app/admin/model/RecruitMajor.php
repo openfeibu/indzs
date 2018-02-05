@@ -27,4 +27,13 @@ class RecruitMajor extends Model
 								->find();
 		return $recruit_major;
 	}
+	public static function get_recruit_majors()
+	{
+		$recruit_majors = Db::name('recruit_major')->select();
+		return $recruit_majors;
+	}
+	public static function get_recruit_major_value($id)
+	{
+		return Db::name('recruit_major')->where(['recruit_major_id' => $id])->value('recruit_major_name');
+	}
 }

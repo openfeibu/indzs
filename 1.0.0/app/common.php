@@ -1745,3 +1745,7 @@ function handle_score($arr)
 	}
 	return sprintf("%.2f", $total);
 }
+function createPayid()
+{
+    return date('Ymd').substr(implode(NULL, array_map('ord', str_split(substr(uniqid(), 7, 13), 1))), 0, 8);
+}

@@ -38,7 +38,8 @@ class Register extends Base
     {
 		if(request()->isPost()){
 			$member_list_username=input('member_list_username');
-			$member_list_email=input('member_list_email');
+		//	$member_list_email=input('member_list_email');
+            $examinee_type_id = input('examinee_type_id');
 			$password=input('password');
 			$repassword=input('repassword');
 			$verify=input('verify');
@@ -47,9 +48,9 @@ class Register extends Base
 				$this->error(lang('verifiy incorrect'));
 			}
 			$rule = [
-				['member_list_email','require|email','{%email empty}|{%email format incorrect}'],
+				// ['member_list_email','require|email','{%email empty}|{%email format incorrect}'],
 				['password','require|length:5,20','{%pwd empty}|{%pwd length}'],
-				['member_list_username','require','{%username empty}'],
+				['member_list_username','require','身份证不能为空'],
 				['repassword','require|confirm:password','{%repassword empty}|{%repassword incorrect}']
 			];
 			$validate = new Validate($rule);
@@ -57,19 +58,25 @@ class Register extends Base
 				'member_list_username'=>$member_list_username,
 				'password'=>$password,
 				'repassword'=>$repassword,
-				'member_list_email'=>$member_list_email
+				// 'member_list_email'=>$member_list_email
 			));
 			$users_model=Db::name("member_list");
 			if(true !==$rst){
 				$this->error(join('|',$validate->getError()));
 			}
 			//用户名需过滤的字符的正则
+            /*
 			$stripChar = '?<*.>\'"';
 			if(preg_match('/['.$stripChar.']/is', $member_list_username)==1){
 				$this->error(lang('username format incorrect',['stripChar'=>$stripChar]));
 			}
+            */
+            if(!is_idcard($member_list_username))
+            {
+                $this->error('身份证格式不正确');
+            }
 			//判断是否存在
-			$result = $users_model->where('member_list_username',$member_list_username)->whereOr('member_list_email',$member_list_email)->count();
+			$result = $users_model->where('member_list_username',$member_list_username)->count();
 			if($result){
 				$this->error(lang('username exists'));
 			}else{
@@ -77,13 +84,14 @@ class Register extends Base
 				$active_options=get_active_options();
 				$sl_data=array(
 					'member_list_username'=>$member_list_username,
-					'member_list_nickname'=>$member_list_username,
+					'member_list_nickname'=>'',
 					'member_list_salt' => $member_list_salt,
 					'member_list_pwd'=>encrypt_password($password,$member_list_salt),
-					'member_list_email'=>$member_list_email,
+					'member_list_email'=>'',
 					'member_list_groupid'=>1,
 					'member_list_open'=>1,
 					'member_list_addtime'=>time(),
+                    'examinee_type_id' => $examinee_type_id,
 					'user_status'=>empty($active_options['email_active'])?1:0,//需要激活,则为未激活状态,否则为激活状态
 				);
 				$rst=$users_model->insertGetId($sl_data);

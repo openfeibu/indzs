@@ -66,12 +66,15 @@
     $('.nowtime').html(new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay()));
    },1000);
    $(".personal_table input").blur(function(){
+       console.log(1);
     var value  = $(this).val();
     var name = $(this).attr('name');
     if($(this).hasClass("noBlur")){
         return false;
     }else{
+        //load = layer.load(1);
         $.post("{:url('home/center/update_info')}",{'name':name,'value':value},function(data){
+            //layer.close(load);
             if($("."+name).length>0){
                 $("."+name).text(value);
             }
@@ -106,6 +109,31 @@
         var val = $(this).val();
         $('[name="sex"]').val(val);
         $('[name="sex"]').blur();
+    })
+    $(".recruitSelect1").change(function(){
+        var val = $(this).val();
+        var text = $(this).find("option:selected").text();
+        var val2 = $(".recruitSelect2").val();
+        if(val2)
+        {
+            var val = val + ',' +val2;
+        }
+        $(this).siblings('[name="recruit_major"]').val(text);
+        console.log($('[name="recruit_major_id"]'));
+        $('[name="recruit_major_id"]').val(val);
+        $('[name="recruit_major_id"]').blur();
+    })
+    $(".recruitSelect2").change(function(){
+        var val = $(this).val();
+        var text = $(this).find("option:selected").text();
+        var val1 = $(".recruitSelect1").val();
+        if(val1)
+        {
+            var val = val1 + ',' +val;
+        }
+        $(this).siblings('[name="recruit_major"]').val(text);
+        $('[name="recruit_major_id"]').val(val);
+        $('[name="recruit_major_id"]').blur();
     })
 </script>
 <script>

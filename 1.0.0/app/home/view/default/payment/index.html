@@ -28,7 +28,7 @@
           </div>
           <div class="col-sm-7" style="margin-top: 20px;">
             <p>
-              Hello，<span class="label label-primary">{$user['member_list_nickname']|default=$user['member_list_username']}</span> 
+              Hello，<span class="label label-primary">{$user['member_list_nickname']|default=$user['member_list_username']}</span>
             </p>
           </div>
         </div>
@@ -45,7 +45,7 @@
                         <div class="col-sm-10">
                             <input class="form-control" name="product_body" value="这是一个测试订单呢" placeholder="请输入商品描述"><span style="animation-duration: 0.2s; padding-right: 20px; color: rgb(169, 68, 66); position: absolute; right: 0px; font-size: 12px; z-index: 2; display: block; width: 30px; text-align: center; pointer-events: none; top: 0px; padding-top: 6px; padding-bottom: 6px; line-height: 20px;"></span>
                         </div>
-                    </div>              
+                    </div>
       <div class="form-group">
         <label class="col-sm-2 control-label">选择游戏：</label>
         <div class="col-sm-10" style="padding: 0px;">
@@ -107,7 +107,6 @@
                   <ul class="sys_spec_img tab-pane fade" id="other">
                   <li data-aid="1" class="cardiconin col-sm-3 "><a href="javascript:;"><img id="wxpaypub" onclick="PayType(this.id)" src="{$yf_theme_path}public/payment/images/wechatpay.png"/></a><i></i></li>
                   <li data-aid="2" class="cardiconin col-sm-3 "><a href="javascript:;"><img id="aliwappay" onclick="PayType(this.id)" src="{$yf_theme_path}public/payment/images/alipay.png"/></a><i></i></li>
-                   
                   </ul>
                 </div>
               </dl>
@@ -351,7 +350,7 @@ $(function () {
             location.href =ret.url;
         }
         if (ret.code == 'JSAPI_SUCCESS') {
-            
+
         }
 
     };

@@ -1,5 +1,13 @@
 $(function(){
 
+	$('.toRegister').click(function(){
+		$(".registerDiv").show();
+		$(".loginDiv").hide();
+	});
+	$('.toLogin').click(function(){
+		$(".loginDiv").show();
+		$(".registerDiv").hide();
+	});
 
 
 })

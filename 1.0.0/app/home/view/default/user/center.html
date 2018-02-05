@@ -25,7 +25,7 @@
                     <tr><td colspan="3" style="text-align: center;font-size: 25px;font-weight: bold;border-top:1px solid #000000;line-height:48px;">2017年自主招生报名表</td></tr>
                     <tr>
                         <td>报考序列号：{$num}</td>
-                        <td width="300px">考生号：<input type="text" name="GexamineeNumber" value="{$info.GexamineeNumber}" style="width:230px;"/></td>
+                        <td width="300px">考生号：{$info.GexamineeNumber}</td>
                         <td>填表日期：
 
                                 {$date}
@@ -37,7 +37,7 @@
                 <table width="756px" class="k-w-table line_table">
                     <tbody><tr class="line-table-height">
                         <td class="k-s-content low_width_1 title" style="text-align: center;">姓&nbsp;&nbsp;名</td>
-                        <td class="k-s-content low_width_2 content"><input type="text" name="name" value="{$info.member_list_nickname}" disabled/></td>
+                        <td class="k-s-content low_width_2 content"><input type="text" name="member_list_nickname" value="{$info.member_list_nickname}" /></td>
                         <td class="k-s-content low_width_3 title">性&nbsp;&nbsp;别</td>
                         <td class="k-s-content low_width_4 content">
                             <input type="text" name="sex" value="{$info.sex}" valType="n" leng="18" disabled/>
@@ -55,8 +55,8 @@
                     <tr class="line-table-height">
                         <td class="k-s-content low_width_1 title">民&nbsp;&nbsp;族</td>
                         <td class="k-s-content content"><input type="text" name="nation" value="{$info.nation}"/></td>
-                        <td class="k-s-content low_width_3 title">籍&nbsp;&nbsp;贯=</td>
-                        <td class="k-s-content content"><input type="text" name="nation" value="{$info.nation}"/></td>
+                        <td class="k-s-content low_width_3 title">籍&nbsp;&nbsp;贯</td>
+                        <td class="k-s-content content"><input type="text" name="domicile" value="{$info.domicile}"/></td>
                         <td class="k-s-content title">政治面貌</td>
                         <td class="k-s-content content"><input type="text" name="politicalOutlook" value="{$info.politicalOutlook}"/></td>
                     </tr>
@@ -184,13 +184,20 @@
                             <input type="text" name="excellentStudent" value="{$info.excellentStudent}"/>
                         </td>
                     </tr>
+                    {if $info.examinee_type_id == '4'}
                     <tr class="line-table-height">
-                        <td class="k-s-content title" colspan="1">专业志愿</td>
+                        <input type="hidden" name="recruit_major_id" value="{$info['recruit_major_id']}" />
+                        <td class="k-s-content title" colspan="1">第一志愿</td>
                         <td class="k-s-content title" colspan="6">
-                            <input type="text" name="wish" value="{$info.wish}"/>
+                            <input type="text" name="recruit_major" value="{if $member_recruit_major[0]}{$member_recruit_major[0]['recruit_major_name']}{else}请选择{/if}" />
+                            <select name="" class="recruitSelect recruitSelect1">
+                                {foreach name="$recruit_majors" item="v"}
+                                <option value="{$v.recruit_major_id}" {if isset($recruit_major_id_arr[0]) && $v.recruit_major_id == $recruit_major_id_arr[0]}selected{/if}>{$v.recruit_major_name}</option>
+                                {/foreach}
+                            </select>
                         </td>
                     </tr>
-                    {if $info.school_type == 'vocational'}
+
                     <tr class="line-table-height">
                         <td class="k-s-content title low_width_1" style=""  rowspan="2">{$school_type_name}阶段获奖技能证书和奖项(改项目内容须学校学籍部门审核并盖章确认，涂改作废)</td>
                         <td class="k-s-content title" colspan="2">所学的专业</td>
@@ -208,6 +215,29 @@
                         </td>
                     </tr>
                     {else}
+                    <tr class="line-table-height">
+                        <input type="hidden" name="recruit_major_id" value="{$info['recruit_major_id']}" />
+                        <td class="k-s-content title" colspan="1">第一志愿</td>
+                        <td class="k-s-content title" colspan="3">
+                            <input type="text" name="recruit_major" value="{if $member_recruit_major[0]}{$member_recruit_major[0]['recruit_major_name']}{else}请选择{/if}" />
+                            <select name="" class="recruitSelect recruitSelect1">
+                                <option value="">请选择</option>
+                                {foreach name="$recruit_majors" item="v"}
+                                <option value="{$v.recruit_major_id}" {if isset($recruit_major_id_arr[0]) && $v.recruit_major_id == $recruit_major_id_arr[0]}selected{/if}>{$v.recruit_major_name}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                        <td class="k-s-content title" colspan="1">第二志愿</td>
+                        <td class="k-s-content title" colspan="2">
+                            <input type="text" name="recruit_major" value="{if isset($member_recruit_major[1])}{$member_recruit_major[1]['recruit_major_name']}{else}请选择{/if}" />
+                            <select name="" class="recruitSelect recruitSelect2">
+                                <option value="">请选择</option>
+                                {foreach name="$recruit_majors" item="v"}
+                                <option value="{$v.recruit_major_id}" {if isset($recruit_major_id_arr[1]) && $v.recruit_major_id == $recruit_major_id_arr[1]}selected{/if}>{$v.recruit_major_name}</option>
+                                {/foreach}
+                            </select>
+                        </td>
+                    </tr>
                     <tr class="line-table-height">
                         <td class="k-s-content title" style=""  rowspan="4">{$school_type_name}阶段学习成绩</td>
                         <td class="k-s-content title" colspan="1">文科类艺术类</td>

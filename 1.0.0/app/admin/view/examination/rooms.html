@@ -12,10 +12,10 @@
 				</a>
 			</div>
             <div class="col-xs-4 col-sm-2 margintop5">
-				<a href="javascript:;" class="generate" url="{:url('admin/Examination/generate')}">
+				<a href="javascript:;" class="generate" url="{:url('admin/Examination/generate_admin')}">
 					<button class="btn btn-sm btn-primary">
 						<i class="ace-icon fa fa-bolt bigger-110"></i>
-						一键生成考场管理员及考场安排
+						一键生成考场管理员
 					</button>
 				</a>
 
@@ -37,8 +37,8 @@
 								ID
 							</th>
 							<th>考场名称</th>
-							<th>对应招生专业</th>
 							<th>科目</th>
+							<th>容纳数</th>
 							<th>操作</th>
 						</tr>
 						</thead>
@@ -54,8 +54,8 @@
                                         </label>{$v.room_id}
                                     </td>
                                     <td>{$v.room_name}</td>
-                                    <td>{$v.recruit_major_name}</td>
-                                    <td>{$v.subjects}</td>
+                                    <td>{$v.subject_name}</td>
+									<td>{$v.room_seating}</td>
                                     <td>
                                         <div class="hidden-sm hidden-xs action-buttons">
                                             <a class="green" href="{:url('admin/Examination/room_edit',array('room_id'=>$v['room_id']))}" title="修改">

@@ -3,44 +3,37 @@
 <tr>
     <th class="hidden-xs ">
         <label class="pos-rel">
-            <input type="checkbox" class="ace" id="chkAll" onclick="CheckAll(this.form)" value="全选">
             <span class="lbl"></span>
         </label>
-        ID
+        排名
     </th>
     <th>姓名</th>
     <th>身份证</th>
-    <th>考场</th>
     {foreach name="subjects" item="v"}
     <th>{$v.subject_name}</th>
     {/foreach}
     <th>成绩审核状态</th>
+    <th>公示状态</th>
 </tr>
 
 {foreach name="data" item="v"}
-<tr>
+<tr {if $v.is_pass}class="tr_active"{/if}>
     <td class="hidden-xs" height="28" >
         <label class="pos-rel">
-            <input name="n_id[]" id="navid" class="ace" type="checkbox" value="{$v.member_list_id}">
             <span class="lbl"></span>
         </label>{$v.no}
     </td>
     <td>{$v.member_list_nickname}</td>
     <td height="28" >{$v.member_list_username}</td>
-    <td>{$v.room_name}</td>
     {foreach name="$v['score_arr']" item="val"}
-    <td data-id="{$v.member_list_id}"><input name="score[]" value="{$val.score}" {if $v['score_status']==1}disabled{/if} class="major_score score_input" data-id="{$val.subject_id}"> </td>
+    <td data-id="{$v.member_list_id}">{$val.score} </td>
     {/foreach}
     </td>
     <td class="status_{$v.member_list_id}">{$v['status_desc']}</td>
+    <td class="status_{$v.member_list_id}">{$v['pass_status']}</td>
 </tr>
 {/foreach}
-<tr>
-    <td height="50" align="center">
-        <button id="btnsubmit" class="btn btn-white btn-blue btn-sm hidden-xs btn-active">通过审核</button>
-    </td>
-    <td height="50" colspan="20" align="center"></td>
-</tr>
+
 {else}
 <tr>
     <td height="50" colspan="20" align="center">暂无数据</td>

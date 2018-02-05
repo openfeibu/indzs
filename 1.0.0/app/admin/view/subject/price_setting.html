@@ -12,22 +12,16 @@
 							<tr>
 								<th>面向招生</th>
                                 <th>科目 </th>
-                                <th>操作</th>
+								<th>价格 </th>
 							</tr>
 							</thead>
 
 							<tbody >
                                 {foreach name='subjects' item='v'}
                                 <tr>
-                                    <td height="28" >{$v.school_type_name}</td>
-                                    <td>{$v.subject_name_desc}</td>
-                                    <td>
-                            			<div class="hidden-sm hidden-xs action-buttons">
-                            				<a class="green"  href="{:url('admin/school/secondary_vocat_major_edit',array('id'=>$v['id']))}" title="修改">
-                            					<i class="ace-icon fa fa-pencil bigger-130"></i>
-                            				</a>
-                            			</div>
-                                    </td>
+                                    <td height="28" >{$v.name}</td>
+                                    <td>{$v.subject_name}</td>
+									<td>{$v.price}</td>
                                 </tr>
                                 {/foreach}
 							</tbody>

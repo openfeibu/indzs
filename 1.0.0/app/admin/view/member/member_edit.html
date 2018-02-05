@@ -128,7 +128,7 @@ margin: 5px;
 			</div>
 		</div>
 
-		{if condition="$member_list_edit['user_status']"}
+		{if condition="$member_list_edit['info_status'] == 1"}
 		<?php
 		$auth=new app\admin\model\AuthRule;
 		$id_curr=$auth->get_url_id();
@@ -173,7 +173,7 @@ margin: 5px;
                     <td class="k-s-content low_width_7" rowspan="5" style="text-align: center;position:relative">
 
 
-                            <img  style="width: 125px; height: 175px; display: inline;" src="{if $member_list_edit.member_list_headpic}{$member_list_edit.member_list_headpic|get_imgurl=1}{else}{$yf_theme_path}public/images/defaultGraph.jpg{/if} " height="175px" width="125px"  class="headicon" data-toggle="modal" data-target="#myModal"  title="建议使用ie9以上浏览器，360浏览器建议使用极速模式">
+                            <img  style="width: 125px; height: 175px; display: inline;" src="{if $member_list_edit.member_list_headpic}{$member_list_edit.member_list_headpic|get_imgurl=1}{else}/public/images/defaultGraph.jpg{/if} " height="175px" width="125px"  class="headicon" data-toggle="modal" data-target="#myModal"  title="建议使用ie9以上浏览器，360浏览器建议使用极速模式">
 
 
                     </td>
@@ -430,24 +430,23 @@ margin: 5px;
 		</div>
         <!--endtprint1-->
         <div class="clearfix form-actions printHide">
-            <div class="col-md-offset-3 col-md-9"  href="{:url('admin/Member/member_active')}" data-id="{$member_list_edit.member_list_id}">
-                {if condition='$member_list_edit.user_status eq 1'}
-                <button class="btn btn-info btn-info member_status_btn" type="button" disabled="">
-                    已审核通过,不可更改
-                </button>
-
+            <div class="col-md-offset-3 col-md-9"  href="{:url('admin/Member/member_check')}" data-id="{$member_list_edit.member_list_id}">
+                {if condition='$member_list_edit.info_status eq 1'}
+                <button class="btn btn-info btn-primary member_info_status_btn" type="button" value="-1">已通过，点击取消通过审核</button>
+                {elseif condition='$member_list_edit.info_status eq -1'}
+                <button class="btn btn-info btn-primary member_info_status_btn" type="button"  value="1">未通过，点击通过审核</button>
                 {else}
-                <button class="btn btn-info btn-primary member_status_btn" type="button">
-                    审核通过
-                </button>
+                <button class="btn btn-info btn-primary member_info_status_btn" type="button" value="1">未审核，点击通过审核</button>
+                <button class="btn btn-info btn-danger member_info_status_btn" type="button" value="-1">未审核，点击不通过审核</button>
                 {/if}
+
                 <!-- <button class="btn btn-info btn-primary printHide" onclick="preview(1)">打印</button> -->
 
             </div>
         </div>
 	</div><!-- /.page-content -->
 
-    {if $member_list_edit['user_status'] ==1}
+    {if $member_list_edit['info_status'] ==1}
     <script type="text/javascript">
      $('.personal_table').find('input').attr('disabled',true);
     </script>

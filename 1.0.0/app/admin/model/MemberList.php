@@ -52,12 +52,13 @@ class MemberList extends Model
 	public static function getMember($member_list_id)
 	{
 		$member= self::name('member_list')->alias('m')
-					->join(config('database.prefix').'member_info mi','m.member_list_id =mi.member_list_id')
+					->join(config('database.prefix').'member_info mi','m.member_list_id =mi.member_list_id','left')
 					->where(array('m.member_list_id' => $member_list_id))->find();
+
 		$member['certificate'] = json_decode($member['certificate'],true);
-		$member['resume'] = json_decode($member['resume'],true);
-		$member['prize'] = json_decode($member['prize'],true);
-		$member['family'] = json_decode($member['family'],true);
+		$member['resume'] = isset($member['resume']) ? json_decode($member['resume'],true) : [];
+		$member['prize'] = isset($member['prize']) ? json_decode($member['prize'],true) : [];
+		$member['family'] = isset($member['family']) ? json_decode($member['family'],true) : [];
 		$member['sex'] = get_sex($member['member_list_username']);
 		$member['date'] = get_birth($member['member_list_username']);
 		$member['watGrade'] = $member['watGrade'] ? json_decode($member['watGrade'],true) : config('watGrade');

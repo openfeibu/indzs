@@ -9,14 +9,13 @@
                    <td class="k-s-content"  width="40%">科目</td>
                    <td class="k-s-content" >成绩</td>
                </tr>
-               {if condition="!empty($major_score_arr)"}
-               {foreach name="major_score_key" item="v" key="k"}
+               {if condition="!empty($score_arr)"}
+               {foreach name="score_arr" item="v" key="k"}
                <tr class="line-table-height">
-                   <td class="k-s-content"  width="40%">{$v}</td>
-                   <td class="k-s-content" >{if isset($major_score_arr[$k])}{$major_score_arr[$k]}{/if}</td>
+                   <td class="k-s-content"  width="40%">{$v.subject_name}</td>
+                   <td class="k-s-content" >{$v.score}</td>
                </tr>
                {/foreach}
-               
                <tr class="line-table-height">
                    <td class="k-s-content" width="40%" >总分</td>
                    <td class="k-s-content" >{$total_score}</td>

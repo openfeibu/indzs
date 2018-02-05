@@ -11,6 +11,7 @@ namespace app\admin\model;
 
 use think\Model;
 use think\Db;
+use app\admin\model\ExamineeType as ExamineeTypeModel;
 
 class Enrollment extends Model
 {
@@ -28,7 +29,16 @@ class Enrollment extends Model
                             ->join(config('database.prefix').'recruit_major rm','rm.recruit_major_id = e.recruit_major_id')
                             ->where(['enrollment_id' => $enrollment_id])
                             ->find();
-
+        $enrollment = self::handleEnrollment($enrollment);
+        return $enrollment;
+    }
+    public static function handleEnrollment($enrollment)
+    {
+        $examinee_type_key = explode(',',$enrollment['examinee_type']);
+        foreach ($examinee_type_key as $key => $value) {
+            $examinee_type = ExamineeTypeModel::getExamineeType($value);
+            $enrollment['examinee_type_val'][$value] = $examinee_type['name'];
+        }
         return $enrollment;
     }
 }

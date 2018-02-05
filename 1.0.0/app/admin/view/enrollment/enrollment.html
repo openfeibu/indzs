@@ -51,7 +51,9 @@
 									</td>
 									<td>{$v.recruit_major_name}</td>
 									<td>{$v.recruit_major_code}</td>
-									<td>{$v.school_type}</td>
+									<td>
+									{php}echo implode('、',array_values($v['examinee_type_val'])){/php}
+									</td>
 									<td>{$v.enrollment_number}</td>
 									<td>
 							            <div class="hidden-sm hidden-xs action-buttons">

@@ -1,0 +1,120 @@
+{include file="public:head_center" /}
+    <div class="main w1000 clearfix" style="background:#fff;">
+        <div class="ticket">
+            <!-- <div class="ticket_title">广东省2018年高等职业院校自主招生准考证及存根样式</div>
+            <div class="ticket_con clearfix">
+                <div class="ticket_item01">
+                    <div class="ticket_item01_title">广东省2018年高等职业院校自主招生准考证存根</div>
+                    <div class="ticket_item01_input">
+                        <span class="inline_block">姓名：</span>
+                        <div class="ticket_item01_input_name inline_block">吴志杰</div>
+                        <span class="inline_block">性别：</span>
+                        <div class="ticket_item01_input_sex inline_block">男</div>
+                    </div>
+                    <div class="ticket_item01_input">
+                        <span class="inline_block">考&nbsp&nbsp生&nbsp&nbsp号：</span>
+                        <div class="ticket_item01_input_knum inline_block">20132251414</div>
+                    </div>
+                    <div class="ticket_item01_input">
+                        <span class="inline_block">身份证号码：</span>
+                        <div class="ticket_item01_input_snum inline_block">445222199564123325</div>
+                    </div>
+                    <div class="ticket_item01_input">
+                        <span class="inline_block">报考学校：</span>
+                        <div class="ticket_item01_input_school inline_block">XX中学</div>
+                    </div>
+                    <div class="ticket_item01_input">
+                        <span class="inline_block">考试编排：</span>
+                        <label class="inline_block" for="">第</label>
+                        <div class="ticket_item01_input_z inline_block">2</div>
+                        <label class="inline_block" for="">组第</label>
+                        <div class="ticket_item01_input_h inline_block">3</div>
+                        <label class="inline_block" for="">号</label>
+                    </div>
+                    <div class="ticket_item01_img">
+                        <img src="images/2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="ticket_item02">
+                    <div class="ticket_item02_title">广东省2018年高等职业院校自主招生准考证存根</div>
+                    <div class="ticket_item02_title2">准&nbsp&nbsp&nbsp&nbsp考&nbsp&nbsp&nbsp&nbsp证</div>
+                    <div class="ticket_item02_input">
+                        <span class="inline_block">姓名：</span>
+                        <div class="ticket_item02_input_name inline_block">吴志杰</div>
+                        <span class="inline_block">性别：</span>
+                        <div class="ticket_item02_input_sex inline_block">男</div>
+                    </div>
+                    <div class="ticket_item02_input">
+                        <span class="inline_block">考&nbsp&nbsp生&nbsp&nbsp号：</span>
+                        <div class="ticket_item02_input_knum inline_block">20132251414</div>
+                    </div>
+                    <div class="ticket_item02_input">
+                        <span class="inline_block">身份证号码：</span>
+                        <div class="ticket_item02_input_snum inline_block">445222199564123325</div>
+                    </div>
+                    <div class="ticket_item02_input">
+                        <span class="inline_block">报考学校：</span>
+                        <div class="ticket_item02_input_school inline_block">XX中学</div>
+                    </div>
+                    <div class="ticket_item02_input">
+                        <span class="inline_block">考试编排：</span>
+                        <label class="inline_block" for="">第</label>
+                        <div class="ticket_item02_input_z inline_block">2</div>
+                        <label class="inline_block" for="">组第</label>
+                        <div class="ticket_item02_input_h inline_block">3</div>
+                        <label class="inline_block" for="">号</label>
+                    </div>
+                    <div class="ticket_item02_img">
+                        <img src="images/2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="ticket_remarks">
+                <label for="" class="inline_block">注：</label>
+                <div class="re_con inline_block">
+                    1.准考证由高职院校寄发考生<br>
+                    2.存根按编组顺序整理交给有关考场考试备查<br>
+                    3.高职院校须在相片处加盖骑缝章。无盖章准考证无效<br>
+                </div>
+            </div> -->
+            <div class="ticket_con2 clearfix">
+                    <div class="ticket_item02">
+                        <div class="ticket_item02_title">广东省2018年高等职业院校自主招生笔试准考证</div>
+                        <div class="ticket_item02_title2">准&nbsp&nbsp&nbsp&nbsp考&nbsp&nbsp&nbsp&nbsp证</div>
+                        <div class="ticket_item02_input">
+                            <span class="inline_block">姓名：</span>
+                            <div class="ticket_item02_input_name inline_block">{$user.member_list_nickname}</div>
+                            <span class="inline_block">性别：</span>
+                            <div class="ticket_item02_input_sex inline_block">{$info.sex}</div>
+                        </div>
+                        <div class="ticket_item02_input">
+                            <span class="inline_block">考&nbsp&nbsp生&nbsp&nbsp号：</span>
+                            <div class="ticket_item02_input_knum inline_block">{$wirte_ticket.admission_ticket}</div>
+                        </div>
+                        <div class="ticket_item02_input">
+                            <span class="inline_block">身份证号码：</span>
+                            <div class="ticket_item02_input_snum inline_block">{$user['member_list_username']}</div>
+                        </div>
+                        <div class="ticket_item02_input">
+                            <span class="inline_block">报考学校：</span>
+                            <div class="ticket_item02_input_school inline_block">{$info.school_name}</div>
+                        </div>
+                        <div class="ticket_item02_input">
+                            <span class="inline_block">考试编排：</span>
+                            <label class="inline_block" for="">课室</label>
+                            <div class="ticket_item02_input_z inline_block">{$wirte_ticket.room_name}</div>
+                            <label class="inline_block" for="">编号</label>
+                            <div class="ticket_item02_input_h inline_block">{$wirte_ticket.room_no}</div>
+                            <label class="inline_block" for="">号</label>
+                        </div>
+                        <div class="ticket_item02_img">
+                            <img src="{if $user.member_list_headpic}{$user.member_list_headpic|get_imgurl=1}{else}{$yf_theme_path}public/images/defaultGraph.jpg{/if}" alt="">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{include  file="public:footer" /}

@@ -1,0 +1,146 @@
+{include file="public:head_center" /}
+    <div class="main w1000 clearfix" style="background:#fff;">
+        {if $user['examinee_type_id'] == 3}
+        {else}
+        {/if}
+  		<div class="flow">
+			<div class="flow_item">
+				<div for="" class="icon icon1 inline_block"></div>
+                <a href="{:url('home/center/index')}" class="inline_block">{if $is_apply}查看报名{else}报名{/if}</a>
+			</div>
+			<div class="flow_item">
+				<div for="" class="icon icon2 inline_block"></div>
+                {if $user['info_status'] == 1}
+                <span class="inline_block active">审核通过</span>
+                {elseif $user['info_status'] == 0}
+                <span class="inline_block active">审核中</span>
+                {else}
+                审核不通过
+                {/if}
+			</div>
+			<div class="flow_item">
+				<div for="" class="icon icon3 inline_block"></div>
+                {if $user['info_status'] == 1}
+                    {if $write_pay}
+                    笔试已缴费
+                    {else}
+                    笔试缴费（50元） ： <a href="{:url('home/Payment/runexaminationpay',['pay_type' => 'alipay'])}" class="inline_block" target="_blank" style="margin-right:5px;">支付宝支付</a><a href="{:url('home/Payment/runexaminationpay',['pay_type' => 'wxpayqrcode'])}" class="inline_block" target="_blank">微信支付</a>
+                    {/if}
+                {else}
+                <span class="inline_block">笔试缴费（50元）</span>
+                {/if}
+			</div>
+			<div class="flow_item">
+				<div for="" class="icon icon4 inline_block"></div>
+                {if $write_pay}
+                    {if $wirte_ticket}
+                    <a href="{:url('home/Center/examination_write_ticket')}" class="inline_block">查看笔试准考证</a>
+                    {else}
+                        <span class="inline_block">待生成笔试准考证</span>
+                    {/if}
+                {else}
+                <span class="inline_block">笔试准考证</span>
+                {/if}
+			</div>
+            <div class="flow_item">
+                <div for="" class="icon icon5 inline_block"></div>
+                {if $wirte_ticket}
+                    {if $write_score_arr}
+                        <a href="{:url('home/Center/grade')}" class="inline_block">查看笔试成绩</a>
+                    {else}
+                    <span class="inline_block">等待笔试成绩录入</span>
+                    {/if}
+                {else}
+                <span class="inline_block">笔试成绩</span>
+                {/if}
+            </div>
+			<div class="flow_item">
+				<div for="" class="icon icon5 inline_block"></div>
+                {if $is_write_publicity}
+                    {if $is_writing_publicity}
+                        <a href="{:url('home/Center/write_publicity')}" class="inline_block">查看笔试公示结果（至{$write_publicity_setting['endtime']}）</a>
+                    {else}
+                        <span class="inline_block">笔试结果公示已结束（{if $user.write_pass}恭喜您，已通过{else}抱歉，未通过{/if}）</span>
+                    {/if}
+                {else}
+                <span class="inline_block">笔试结果公示3天</span>
+                {/if}
+			</div>
+			<div class="flow_item">
+				<div for="" class="icon icon2 inline_block"></div>
+                {if $is_write_publicity && $is_writing_publicity == 0 && $user.write_pass}
+                    {if $skill_pay}
+                    技能考核已缴费
+                    {else}
+                    技能考核缴费:<a href="{:url('home/Payment/runexaminationpay',['pay_type' => 'alipay'])}" class="inline_block" target="_blank" style="margin-right:5px;">支付宝支付</a><a href="{:url('home/Payment/runexaminationpay',['pay_type' => 'wxpayqrcode'])}" class="inline_block" target="_blank">微信支付</a>
+                    {/if}
+                {else}
+                <span class="inline_block">技能考核缴费</span>
+                {/if}
+			</div>
+			<div class="flow_item">
+				<div for="" class="icon icon4 inline_block"></div>
+                {if $skill_pay}
+                    {if $skill_ticket}
+                    <a href="{:url('home/Center/examination_skill_ticket')}" class="inline_block">查看技能考核准考证</a>
+                    {else}
+                        <span class="inline_block">待生成技能考核准考证</span>
+                    {/if}
+                {else}
+                <span class="inline_block">技能考核准考证</span>
+                {/if}
+			</div>
+			<div class="flow_item">
+				<div for="" class="icon icon5 inline_block"></div>
+                {if $skill_ticket}
+                    {if $skill_score_arr}
+                        <a href="{:url('home/Center/grade')}" class="inline_block">查看技能考核成绩</a>
+                    {else}
+                    <span class="inline_block">等待技能考核成绩录入</span>
+                    {/if}
+                {else}
+                <span class="inline_block">技能考核成绩</span>
+                {/if}
+			</div>
+			<div class="flow_item">
+				<div for="" class="icon icon5 inline_block"></div>
+                {if $is_enroll_publicity}
+                    {if $is_enrolling_publicity}
+                        <a href="{:url('home/Center/enroll_publicity')}" class="inline_block">查看录取公示结果（至{$enroll_publicity_setting['endtime']}）</a>
+                    {else}
+                        <span class="inline_block">录取结果公示已结束（{if $user.enroll_pass}恭喜您，已通过{else}抱歉，未通过{/if}）</span>
+                    {/if}
+                {else}
+                <span class="inline_block">录取结果公示3天</span>
+                {/if}
+			</div>
+  		</div>
+  		<div class="notice">
+			<ul>
+				<li>1,报名管理报名管理报名管理报名管理密码更改密码更改密码更改密码更改密码更改密码更改;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+				<li>1,报名管理报名管理报名管理报名管理;</li>
+			</ul>
+  		</div>
+
+
+    </div>
+
+
+
+{include  file="public:footer" /}

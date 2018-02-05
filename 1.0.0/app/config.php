@@ -367,6 +367,10 @@ $configs= [
         'senior' => '普高',
         'vocational' => '中职',
     ],
+    'pass_status' => [
+        '0' => '不通过',
+        '1' => '通过',
+    ],
 ];
 //动态设置
 if(file_exists($file=ROOT_PATH."data/conf/config.php")){

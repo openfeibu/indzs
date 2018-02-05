@@ -168,15 +168,16 @@ class School extends Base
 	}
 	public function secondary_vocat_major_list()
 	{
-		$subjects = Db::name('subjects')->select();
-		foreach($subjects as $key => $val)
-		{
-			$subjects[$key]['school_type_name'] = config('school_type')[$val['school_type']];
-			$subjects[$key]['subjects'] = $val['subjects'] ? json_decode($val['subjects']) : [];
-			$subjects[$key]['subjects_desc'] = $subjects[$key]['subjects'] ? implode(' , ',$subjects[$key]['subjects']) : '';
-
-
-		}
+		// $subjects = Db::name('subjects')->select();
+		// foreach($subjects as $key => $val)
+		// {
+		// 	$subjects[$key]['school_type_name'] = config('school_type')[$val['school_type']];
+		// 	$subjects[$key]['subjects'] = $val['subjects'] ? json_decode($val['subjects']) : [];
+		// 	$subjects[$key]['subjects_desc'] = $subjects[$key]['subjects'] ? implode(' , ',$subjects[$key]['subjects']) : '';
+        //
+        //
+		// }
+		$subjects = array();
 		$this->assign('subjects',$subjects);
 		return $this->fetch();
 	}
@@ -196,6 +197,7 @@ class School extends Base
 
 	public function secondary_vocat_major_runedit()
 	{
+
 		$id= input('id');
 		$subject = Db::name('subjects')->find($id);
 		if(!$subject)

@@ -11,11 +11,14 @@ namespace app\home\controller;
 use think\Cache;
 use think\Db;
 use think\captcha\Captcha;
+use app\admin\model\ExamineeType as ExamineeTypeModel;
 
 class Index extends Base
 {
 	public function index()
     {
+		$examinee_type = ExamineeTypeModel::getExamineeTypes();
+        $this->assign('examinee_type',$examinee_type);
 		return $this->view->fetch(':index');
 	}
 	public function visit()
@@ -79,4 +82,5 @@ class Index extends Base
 			}
 		}
 	}
+	
 }

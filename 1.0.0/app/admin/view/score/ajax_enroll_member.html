@@ -1,0 +1,39 @@
+{if $data}
+
+<tr>
+    <th class="hidden-xs ">
+        <label class="pos-rel">
+            <span class="lbl"></span>
+        </label>
+        排名
+    </th>
+    <th>姓名</th>
+    <th>身份证</th>
+    {foreach name="subjects" item="v"}
+    <th>{$v.subject_name}</th>
+    {/foreach}
+    <th>公示状态</th>
+</tr>
+
+{foreach name="data" item="v"}
+<tr {if $v.is_pass}class="tr_active"{/if}>
+    <td class="hidden-xs" height="28" >
+        <label class="pos-rel">
+            <span class="lbl"></span>
+        </label>{$v.no}
+    </td>
+    <td>{$v.member_list_nickname}</td>
+    <td height="28" >{$v.member_list_username}</td>
+    {foreach name="$v['score_arr']" item="val"}
+    <td data-id="{$v.member_list_id}">{$val.score} </td>
+    {/foreach}
+    </td>
+    <td class="status_{$v.member_list_id}">{$v['pass_status']}</td>
+</tr>
+{/foreach}
+
+{else}
+<tr>
+    <td height="50" colspan="20" align="center">暂无数据</td>
+</tr>
+{/if}

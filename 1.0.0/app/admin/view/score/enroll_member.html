@@ -1,0 +1,51 @@
+{extend name="admin@public/base" /}
+{block name="main-content"}
+	<div class="page-content">
+		<div class="row maintop">
+			<form name="admin_list_sea" class="form-search" id="list-filter" method="post" action="{:url('admin/score/enroll_member')}">
+				<div class="col-xs-12 col-sm-5  margintop5">
+					选择专业：
+					<select name="enrollment_id" class="togetsubjects">
+						{foreach name="enrollments" item="v" key="k"}
+						<option value="{$v.enrollment_id}" {if $enrollment_id == $v.enrollment_id }selected{/if}>{$v.recruit_major_name}（面向{php}echo implode('、',array_values($v['examinee_type_val'])){/php}招生{php}echo $v['enrollment_number'];{/php}人）</option>
+						{/foreach}
+					</select>
+				</div>
+				<div class="col-xs-4 col-sm-2 margintop5">
+					{if $enroll_publicity_setting.starttime}
+					<a href="javascript:;" class="" url="{:url('admin/Enrollment/edit_publicity',['name' => 'write'])}">
+						<button class="btn btn-sm btn-primary" disabled>
+							已公示结果（至{$enroll_publicity_setting.endtime}）
+						</button>
+					</a>
+					{else}
+					<a href="javascript:;" class="edit_publicity" url="{:url('admin/Enrollment/edit_publicity',['name' => 'enroll'])}">
+						<button class="btn btn-sm btn-primary">
+							<i class="ace-icon fa fa-bolt bigger-110"></i>
+							确认无误公示录取结果三天
+						</button>
+					</a>
+					{/if}
+				</div>
+			</form>
+
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div>
+					<form id="leftnav" class="ajaxForm" name="leftnav" method="post" action="{:url('admin/Score/score_active')}" >
+						<input name="p" id="p" value="{:input('p',1)}" type="hidden" />
+						<input type="hidden" name="checkk" id="checkk" value="1" /><!--用于判断操作类型-->
+						<table class="table table-bordered table-hover" id="dynamic-table ">
+							<tbody id="ajax-data">
+								{include file="score/ajax_enroll_member"/}
+							</tbody>
+						</table>
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+	</div><!-- /.page-content -->
+{/block}
